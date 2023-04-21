@@ -42,10 +42,10 @@ final class HTTPClientTests: XCTestCase {
         MockURL.addMock(for: url, result: .success((response, data)))
         
         // test request and decoding
-        let result: Result<TestEntity, RequestError> = await httpClient.GET(url)
+        let result: HTTPClient.Result<TestEntity> = await httpClient.GET(url)
         switch result {
-        case .success(let model):
-            XCTAssertEqual(model, TestEntity(test: "Test"), "Decoded `TestEntity` doesn't match expected test data.")
+        case .success(let success):
+            XCTAssertEqual(success.object, TestEntity(test: "Test"), "Decoded `TestEntity` doesn't match expected test data.")
         case .failure:
             XCTFail("Request should succeed.")
         }
@@ -62,7 +62,7 @@ final class HTTPClientTests: XCTestCase {
         
         // test request
         let assertionMessage = "Request should fail with `clientError`."
-        let result: Result<TestEntity, RequestError> = await httpClient.GET(url)
+        let result: HTTPClient.Result<TestEntity> = await httpClient.GET(url)
         switch result {
         case .success:
             XCTFail(assertionMessage)
@@ -86,7 +86,7 @@ final class HTTPClientTests: XCTestCase {
         
         // test request
         let assertionMessage = "Request should fail with `serverError`."
-        let result: Result<TestEntity, RequestError> = await httpClient.GET(url)
+        let result: HTTPClient.Result<TestEntity> = await httpClient.GET(url)
         switch result {
         case .success:
             XCTFail(assertionMessage)
@@ -115,7 +115,7 @@ final class HTTPClientTests: XCTestCase {
         
         // test request and decoding
         let assertionMessage = "Request should fail with `serializationError`."
-        let result: Result<TestEntity, RequestError> = await httpClient.GET(url)
+        let result: HTTPClient.Result<TestEntity> = await httpClient.GET(url)
         switch result {
         case .success:
             XCTFail(assertionMessage)
@@ -135,7 +135,7 @@ final class HTTPClientTests: XCTestCase {
         
         // test request and decoding
         let assertionMessage = "Request should fail with `urlError`."
-        let result: Result<TestEntity, RequestError> = await httpClient.GET(url)
+        let result: HTTPClient.Result<TestEntity> = await httpClient.GET(url)
         switch result {
         case .success:
             XCTFail(assertionMessage)

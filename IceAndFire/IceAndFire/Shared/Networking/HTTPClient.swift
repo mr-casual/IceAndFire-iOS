@@ -27,6 +27,9 @@ enum RequestError: Error {
 }
 
 class HTTPClient {
+    
+    typealias Result<ResponseObject> = Swift.Result<Success<ResponseObject>, RequestError>
+    
     private let urlSession: URLSession
     private let decoder: JSONDecoder
 
@@ -36,12 +39,12 @@ class HTTPClient {
         self.decoder = decoder
     }
 
-    func GET<ResponseObject: Decodable>(_ url: URL) async -> Result<ResponseObject, RequestError> {
+    func GET<ResponseObject: Decodable>(_ url: URL) async -> Result<ResponseObject> {
         let request = URLRequest(url: url)
         return await perform(request: request)
     }
     
-    private func perform<ResponseObject: Decodable>(request: URLRequest) async -> Result<ResponseObject, RequestError> {
+    private func perform<ResponseObject: Decodable>(request: URLRequest) async -> Result<ResponseObject> {
         var responseBody: Data?
         do {
             let (data, response) = try await urlSession.data(for: request)
@@ -62,7 +65,8 @@ class HTTPClient {
             }
             
             responseBody = data
-            return .success(try decoder.decode(ResponseObject.self, from: data))
+            let responseObject: ResponseObject = try decoder.decode(ResponseObject.self, from: data)
+            return .success(.init(object: responseObject, response: httpResponse))
         } catch let error as DecodingError {
             return .failure(.serializationError(error: error, data: responseBody))
         } catch let error as URLError {
@@ -70,5 +74,12 @@ class HTTPClient {
         } catch {
             return .failure(.unknow(error, data: responseBody))
         }
+    }
+}
+
+extension HTTPClient {
+    struct Success<ResponseObject> {
+        let object: ResponseObject
+        let response: HTTPURLResponse
     }
 }

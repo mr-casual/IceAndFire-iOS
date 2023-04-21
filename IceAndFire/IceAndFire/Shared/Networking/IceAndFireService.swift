@@ -21,17 +21,35 @@ class IceAndFireService: AnyIceAndFireService {
     init(urlSession: URLSession) {
         self.httpClient = .init(urlSession: urlSession, decoder: JSONDecoder())
     }
-
+    
     func fetchHouses() async -> Result<[House], RequestError> {
         let url = baseURL.appendingPathComponent("houses")
-        return await httpClient.GET(url)
+        let result: HTTPClient.Result<[House]> = await httpClient.GET(url)
+        switch result {
+        case .success(let success):
+            return .success(success.object)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
-
+    
     func fetchHouse(from url: URL) async -> Result<House, RequestError> {
-        return await httpClient.GET(url)
+        let result: HTTPClient.Result<House> = await httpClient.GET(url)
+        switch result {
+        case .success(let success):
+            return .success(success.object)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
-
+    
     func fetchCharacter(from url: URL) async -> Result<Character, RequestError> {
-        return await httpClient.GET(url)
+        let result: HTTPClient.Result<Character> = await httpClient.GET(url)
+        switch result {
+        case .success(let success):
+            return .success(success.object)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
 }
