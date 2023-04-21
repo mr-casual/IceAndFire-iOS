@@ -28,6 +28,8 @@
 		E778191529F31D4600B3AF36 /* MockURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191429F31D4600B3AF36 /* MockURL.swift */; };
 		E778191929F3221E00B3AF36 /* Bundle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191829F3221E00B3AF36 /* Bundle+Helper.swift */; };
 		E778191B29F32B5900B3AF36 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */; };
+		E778192629F33ABC00B3AF36 /* HousesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778192529F33ABC00B3AF36 /* HousesListViewModel.swift */; };
+		E778192829F33AC500B3AF36 /* HouseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		E778191429F31D4600B3AF36 /* MockURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockURL.swift; path = ../../../../../../Documents/MockURL.swift; sourceTree = "<group>"; };
 		E778191829F3221E00B3AF36 /* Bundle+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Helper.swift"; sourceTree = "<group>"; };
 		E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		E778192529F33ABC00B3AF36 /* HousesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListViewModel.swift; sourceTree = "<group>"; };
+		E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,14 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				E77818D029F3141200B3AF36 /* Assets.xcassets */,
-				E77818F829F3145900B3AF36 /* Character.swift */,
-				E77818F629F3145900B3AF36 /* House.swift */,
-				E77818F729F3145900B3AF36 /* HouseDetailView.swift */,
-				E77818FA29F3145900B3AF36 /* HousesListView.swift */,
-				E778191029F31B1E00B3AF36 /* HTTPClient.swift */,
-				E778190F29F31B1E00B3AF36 /* HTTPMethod.swift */,
-				E77818CC29F3140F00B3AF36 /* IceAndFireApp.swift */,
-				E77818F929F3145900B3AF36 /* IceAndFireService.swift */,
+				E778191C29F339AC00B3AF36 /* Modules */,
+				E778191D29F33A1800B3AF36 /* Shared */,
 				E77818D229F3141200B3AF36 /* Preview Content */,
 			);
 			path = IceAndFire;
@@ -183,6 +181,70 @@
 				E778190529F3146600B3AF36 /* house7.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		E778191C29F339AC00B3AF36 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E778192229F33A7100B3AF36 /* App */,
+				E778192329F33A7700B3AF36 /* HousesList */,
+				E778192429F33A8C00B3AF36 /* HouseDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E778191D29F33A1800B3AF36 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E778192129F33A4B00B3AF36 /* Entities */,
+				E778191E29F33A2200B3AF36 /* Networking */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E778191E29F33A2200B3AF36 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E778191029F31B1E00B3AF36 /* HTTPClient.swift */,
+				E778190F29F31B1E00B3AF36 /* HTTPMethod.swift */,
+				E77818F929F3145900B3AF36 /* IceAndFireService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E778192129F33A4B00B3AF36 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E77818F829F3145900B3AF36 /* Character.swift */,
+				E77818F629F3145900B3AF36 /* House.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E778192229F33A7100B3AF36 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E77818CC29F3140F00B3AF36 /* IceAndFireApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E778192329F33A7700B3AF36 /* HousesList */ = {
+			isa = PBXGroup;
+			children = (
+				E778192529F33ABC00B3AF36 /* HousesListViewModel.swift */,
+				E77818FA29F3145900B3AF36 /* HousesListView.swift */,
+			);
+			path = HousesList;
+			sourceTree = "<group>";
+		};
+		E778192429F33A8C00B3AF36 /* HouseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */,
+				E77818F729F3145900B3AF36 /* HouseDetailView.swift */,
+			);
+			path = HouseDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +389,8 @@
 				E77818FE29F3145900B3AF36 /* IceAndFireService.swift in Sources */,
 				E77818FC29F3145900B3AF36 /* HouseDetailView.swift in Sources */,
 				E77818FD29F3145900B3AF36 /* Character.swift in Sources */,
+				E778192629F33ABC00B3AF36 /* HousesListViewModel.swift in Sources */,
+				E778192829F33AC500B3AF36 /* HouseDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

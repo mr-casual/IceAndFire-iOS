@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct HouseDetailView: View {
-    let house: String
+    
+    let viewModel: HouseDetailViewModel
     
     var body: some View {
-        Text(house)
+        Text(viewModel.house)
     }
 }
 
 struct HouseDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseDetailView(house: "House Ambrose")
+        HouseDetailView(viewModel: HouseDetailViewModel(house: "House Ambrose"))
     }
 }

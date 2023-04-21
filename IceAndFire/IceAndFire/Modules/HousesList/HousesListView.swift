@@ -14,28 +14,26 @@ struct ListItem<T>: Identifiable {
 
 struct HousesListView: View {
     
-    let houses: [ListItem<String>] = [.init(content: "House Algood"),
-                                      .init(content: "House Allyrion of Godsgrace"),
-                                      .init(content: "House Amber")]
-    
+    @StateObject var viewModel: HousesListViewModel
+
     var body: some View {
         List {
-            ForEach(houses) { item in
+            ForEach(viewModel.house, id: \.self) { item in
                 NavigationLink {
-                    HouseDetailView(house: item.content)
+                    HouseDetailView(viewModel: HouseDetailViewModel(house: item.name))
                 } label: {
-                    Text(item.content)
+                    Text(item.name)
                 }
             }
         }
-        .navigationTitle("IceAndFire Houses")
+        .navigationTitle("Houses of Ice and Fire")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            HousesListView()
+            HousesListView(viewModel: HousesListViewModel(service: IceAndFireService(urlSession: .shared)))
         }
     }
 }

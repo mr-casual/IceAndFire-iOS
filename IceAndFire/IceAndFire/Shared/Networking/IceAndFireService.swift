@@ -28,12 +28,10 @@ class IceAndFireService: AnyIceAndFireService {
     }
 
     func fetchHouse(from url: URL) async -> Result<House, RequestError> {
-        let request = URLRequest(url: url)
         return await httpClient.GET(url)
     }
 
     func fetchCharacter(from url: URL) async -> Result<Character, RequestError> {
-        let request = URLRequest(url: url)
         return await httpClient.GET(url)
     }
 }

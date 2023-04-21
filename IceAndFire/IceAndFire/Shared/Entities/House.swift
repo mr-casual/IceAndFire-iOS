@@ -59,7 +59,7 @@ struct House {
     let swornMembersURLs: [URL]
 }
 
-extension House: Equatable {}
+extension House: Equatable, Hashable {}
 
 extension House: Decodable {
     init(from decoder: Decoder) throws {

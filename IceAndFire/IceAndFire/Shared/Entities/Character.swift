@@ -28,4 +28,4 @@ struct Character: Decodable {
     let playedBy: [String]
 }
 
-extension Character: Equatable {}
+extension Character: Equatable, Hashable {}
