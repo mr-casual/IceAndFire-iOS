@@ -21,9 +21,9 @@ class HousesListViewModel: ObservableObject {
     }
     
     func loadHouses() async {
-        switch await service.fetchHouses() {
-        case .success(let houses):
-            self.house.append(contentsOf: houses)
+        switch await service.fetchHouses(from: nil) {
+        case .success(let page):
+            self.house.append(contentsOf: page.items)
         case .failure(let error):
             print("Fetching houses failed: \(error.localizedDescription)")
         }

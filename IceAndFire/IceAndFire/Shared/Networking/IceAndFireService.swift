@@ -7,8 +7,13 @@
 
 import Foundation
 
+struct PageResponse<T> {
+    let items: [T]
+    let nextPage: URL?
+}
+
 protocol AnyIceAndFireService {
-    func fetchHouses() async -> Result<[House], RequestError>
+    func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError>
     func fetchHouse(from url: URL) async -> Result<House, RequestError>
     func fetchCharacter(from url: URL) async -> Result<Character, RequestError>
 }
@@ -22,12 +27,12 @@ class IceAndFireService: AnyIceAndFireService {
         self.httpClient = .init(urlSession: urlSession, decoder: JSONDecoder())
     }
     
-    func fetchHouses() async -> Result<[House], RequestError> {
-        let url = baseURL.appendingPathComponent("houses")
+    func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError> {
+        let url = url ?? baseURL.appendingPathComponent("houses")
         let result: HTTPClient.Result<[House]> = await httpClient.GET(url)
         switch result {
         case .success(let success):
-            return .success(success.object)
+            return .success(PageResponse(items: success.object, nextPage: nil))
         case .failure(let error):
             return .failure(error)
         }

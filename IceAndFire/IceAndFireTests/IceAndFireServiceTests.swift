@@ -34,10 +34,10 @@ final class IceAndFireServiceTests: XCTestCase {
         MockURL.addMock(for: url, result: .success((response, data)))
         
         // fetch houses
-        let result = await service.fetchHouses()
+        let result = await service.fetchHouses(from: nil)
         switch result {
-        case .success(let houses):
-            XCTAssert(houses.count == 50, "Service returned unexpected number of houses.")
+        case .success(let page):
+            XCTAssert(page.items.count == 50, "Service returned unexpected number of houses.")
         case .failure(let error):
             XCTFail("Failed to fetch houses: \(error.localizedDescription)")
         }
