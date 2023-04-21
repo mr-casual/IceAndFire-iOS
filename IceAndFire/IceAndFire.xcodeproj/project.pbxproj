@@ -17,6 +17,9 @@
 		E721F0E729F075D100709AC9 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0E629F075D100709AC9 /* HouseDetailView.swift */; };
 		E721F0E929F077CB00709AC9 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0E829F077CB00709AC9 /* House.swift */; };
 		E721F0EC29F0798E00709AC9 /* IceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0EB29F0798E00709AC9 /* IceAndFireService.swift */; };
+		E77818B129F3073A00B3AF36 /* houses.json in Resources */ = {isa = PBXBuildFile; fileRef = E77818AE29F3073300B3AF36 /* houses.json */; };
+		E77818B229F3073A00B3AF36 /* house7.json in Resources */ = {isa = PBXBuildFile; fileRef = E77818AF29F3073300B3AF36 /* house7.json */; };
+		E77818B329F3073A00B3AF36 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818B029F3073A00B3AF36 /* HouseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		E721F0E629F075D100709AC9 /* HouseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
 		E721F0E829F077CB00709AC9 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		E721F0EB29F0798E00709AC9 /* IceAndFireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireService.swift; sourceTree = "<group>"; };
+		E77818AE29F3073300B3AF36 /* houses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = houses.json; sourceTree = "<group>"; };
+		E77818AF29F3073300B3AF36 /* house7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = house7.json; sourceTree = "<group>"; };
+		E77818B029F3073A00B3AF36 /* HouseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,8 @@
 		E721F0CC29F074D300709AC9 /* IceAndFireTests */ = {
 			isa = PBXGroup;
 			children = (
+				E77818AD29F3073300B3AF36 /* MockData */,
+				E77818B029F3073A00B3AF36 /* HouseTests.swift */,
 				E721F0CD29F074D300709AC9 /* IceAndFireServiceTests.swift */,
 			);
 			path = IceAndFireTests;
@@ -134,6 +142,15 @@
 				E721F0D929F074D300709AC9 /* IceAndFireUITestsLaunchTests.swift */,
 			);
 			path = IceAndFireUITests;
+			sourceTree = "<group>";
+		};
+		E77818AD29F3073300B3AF36 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				E77818AE29F3073300B3AF36 /* houses.json */,
+				E77818AF29F3073300B3AF36 /* house7.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +266,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E77818B229F3073A00B3AF36 /* house7.json in Resources */,
+				E77818B129F3073A00B3AF36 /* houses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E77818B329F3073A00B3AF36 /* HouseTests.swift in Sources */,
 				E721F0CE29F074D300709AC9 /* IceAndFireServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
