@@ -10,28 +10,51 @@ import XCTest
 
 final class IceAndFireServiceTests: XCTestCase {
     
-    let service = IceAndFireService(urlSession: URLSession.shared)
-
-    override func setUp() {
-
-    }
+    private let urlSession: URLSession = {
+        let sessionConfiguration = URLSessionConfiguration.default
+        sessionConfiguration.protocolClasses = [MockURL.self]
+        return URLSession(configuration: sessionConfiguration)
+    }()
+    
+    private lazy var service = IceAndFireService(urlSession: urlSession)
 
     override func tearDown() {
-
+        MockURL.removeAllMocks()
     }
 
-    func testFetchHouses() async {
+    func testFetchHouses() async throws {
+        // setup mock response
+        let url = URL(string: "https://www.anapioficeandfire.com/api/houses")!
+        let response = HTTPURLResponse(url: url,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        let path = Bundle.iceAndFireTests.path(forResource: "houses", ofType: "json")!
+        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+        MockURL.addMock(for: url, result: .success((response, data)))
+        
+        // fetch houses
         let result = await service.fetchHouses()
         switch result {
         case .success(let houses):
-            XCTAssert(houses.count == 10, "Service returned unexpected number of houses.")
+            XCTAssert(houses.count == 50, "Service returned unexpected number of houses.")
         case .failure(let error):
             XCTFail("Failed to fetch houses: \(error.localizedDescription)")
         }
     }
     
-    func testFetchHouse() async {
+    func testFetchHouse() async throws {
+        // setup mock response
         let url = URL(string: "https://www.anapioficeandfire.com/api/houses/7")!
+        let response = HTTPURLResponse(url: url,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        let path = Bundle.iceAndFireTests.path(forResource: "house7", ofType: "json")!
+        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+        MockURL.addMock(for: url, result: .success((response, data)))
+        
+        // fetch house 7
         let result = await service.fetchHouse(from: url)
         switch result {
         case .success(let house):
@@ -41,8 +64,18 @@ final class IceAndFireServiceTests: XCTestCase {
         }
     }
     
-    func testFetchCharacter() async {
+    func testFetchCharacter() async throws {
+        // setup mock response
         let url = URL(string: "https://www.anapioficeandfire.com/api/characters/894")!
+        let response = HTTPURLResponse(url: url,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        let path = Bundle.iceAndFireTests.path(forResource: "character894", ofType: "json")!
+        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+        MockURL.addMock(for: url, result: .success((response, data)))
+        
+        // fetch character 894
         let result = await service.fetchCharacter(from: url)
         switch result {
         case .success(let character):
