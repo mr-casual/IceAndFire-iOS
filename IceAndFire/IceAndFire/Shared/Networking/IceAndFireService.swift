@@ -21,18 +21,23 @@ protocol AnyIceAndFireService {
 class IceAndFireService: AnyIceAndFireService {
 
     private let httpClient: HTTPClient
-    private let baseURL = URL(string: "https://www.anapioficeandfire.com/api/")!
 
     init(urlSession: URLSession) {
         self.httpClient = .init(urlSession: urlSession, decoder: JSONDecoder())
     }
     
     func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError> {
-        let url = url ?? baseURL.appendingPathComponent("houses")
-        let result: HTTPClient.Result<[House]> = await httpClient.GET(url)
+        let firstPageURL = URL(string: "https://www.anapioficeandfire.com/api/houses?pageSize=20")!
+        let result: HTTPClient.Result<[House]> = await httpClient.GET(url ?? firstPageURL)
         switch result {
         case .success(let success):
-            return .success(PageResponse(items: success.object, nextPage: nil))
+            var nextPage: URL?
+            if let linkHeader = success.response.value(forHTTPHeaderField: "Link"),
+               let nextLinkString = linkHeader.components(separatedBy: ",").first(where: { $0.matches(regex: #"rel="next""#) }),
+               let urlString = nextLinkString.matchGroups(regex: #"<(.+)>"#).first {
+                nextPage = URL(string: urlString)
+            }
+            return .success(PageResponse(items: success.object, nextPage: nextPage))
         case .failure(let error):
             return .failure(error)
         }

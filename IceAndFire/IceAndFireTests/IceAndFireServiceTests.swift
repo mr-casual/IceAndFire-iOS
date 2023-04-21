@@ -22,14 +22,14 @@ final class IceAndFireServiceTests: XCTestCase {
         MockURL.removeAllMocks()
     }
 
-    func testFetchHouses() async throws {
+    func testFetchFirstPageOfHouses() async throws {
         // setup mock response
-        let url = URL(string: "https://www.anapioficeandfire.com/api/houses")!
+        let url = URL(string: "https://www.anapioficeandfire.com/api/houses?pageSize=20")!
         let response = HTTPURLResponse(url: url,
                                        statusCode: 200,
                                        httpVersion: nil,
                                        headerFields: nil)
-        let path = Bundle.iceAndFireTests.path(forResource: "houses", ofType: "json")!
+        let path = Bundle.iceAndFireTests.path(forResource: "houses_page1", ofType: "json")!
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         MockURL.addMock(for: url, result: .success((response, data)))
         
@@ -37,7 +37,28 @@ final class IceAndFireServiceTests: XCTestCase {
         let result = await service.fetchHouses(from: nil)
         switch result {
         case .success(let page):
-            XCTAssert(page.items.count == 50, "Service returned unexpected number of houses.")
+            XCTAssert(page.items.count == 20, "Service returned unexpected number of houses.")
+        case .failure(let error):
+            XCTFail("Failed to fetch houses: \(error.localizedDescription)")
+        }
+    }
+    
+    func testFetchNextPageOfHouses() async throws {
+        // setup mock response
+        let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=2&pageSize=20")!
+        let response = HTTPURLResponse(url: url,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        let path = Bundle.iceAndFireTests.path(forResource: "houses_page2", ofType: "json")!
+        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+        MockURL.addMock(for: url, result: .success((response, data)))
+        
+        // fetch houses
+        let result = await service.fetchHouses(from: url)
+        switch result {
+        case .success(let page):
+            XCTAssert(page.items.count == 20, "Service returned unexpected number of houses.")
         case .failure(let error):
             XCTFail("Failed to fetch houses: \(error.localizedDescription)")
         }

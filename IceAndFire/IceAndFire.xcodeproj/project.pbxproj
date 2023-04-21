@@ -18,7 +18,7 @@
 		E77818FF29F3145900B3AF36 /* HousesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818FA29F3145900B3AF36 /* HousesListView.swift */; };
 		E778190829F3146600B3AF36 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778190029F3146600B3AF36 /* CharacterTests.swift */; };
 		E778190929F3146600B3AF36 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = E778190229F3146600B3AF36 /* characters.json */; };
-		E778190A29F3146600B3AF36 /* houses.json in Resources */ = {isa = PBXBuildFile; fileRef = E778190329F3146600B3AF36 /* houses.json */; };
+		E778190A29F3146600B3AF36 /* houses_page1.json in Resources */ = {isa = PBXBuildFile; fileRef = E778190329F3146600B3AF36 /* houses_page1.json */; };
 		E778190B29F3146600B3AF36 /* character894.json in Resources */ = {isa = PBXBuildFile; fileRef = E778190429F3146600B3AF36 /* character894.json */; };
 		E778190C29F3146600B3AF36 /* house7.json in Resources */ = {isa = PBXBuildFile; fileRef = E778190529F3146600B3AF36 /* house7.json */; };
 		E778190D29F3146600B3AF36 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778190629F3146600B3AF36 /* HouseTests.swift */; };
@@ -30,6 +30,8 @@
 		E778191B29F32B5900B3AF36 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */; };
 		E778192629F33ABC00B3AF36 /* HousesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778192529F33ABC00B3AF36 /* HousesListViewModel.swift */; };
 		E778192829F33AC500B3AF36 /* HouseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */; };
+		E778192B29F34CF100B3AF36 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778192A29F34CF100B3AF36 /* String+Regex.swift */; };
+		E778192D29F356D700B3AF36 /* houses_page2.json in Resources */ = {isa = PBXBuildFile; fileRef = E778192C29F3565F00B3AF36 /* houses_page2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +66,7 @@
 		E77818FA29F3145900B3AF36 /* HousesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesListView.swift; sourceTree = "<group>"; };
 		E778190029F3146600B3AF36 /* CharacterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 		E778190229F3146600B3AF36 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
-		E778190329F3146600B3AF36 /* houses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = houses.json; sourceTree = "<group>"; };
+		E778190329F3146600B3AF36 /* houses_page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = houses_page1.json; sourceTree = "<group>"; };
 		E778190429F3146600B3AF36 /* character894.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = character894.json; sourceTree = "<group>"; };
 		E778190529F3146600B3AF36 /* house7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = house7.json; sourceTree = "<group>"; };
 		E778190629F3146600B3AF36 /* HouseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		E778192529F33ABC00B3AF36 /* HousesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListViewModel.swift; sourceTree = "<group>"; };
 		E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewModel.swift; sourceTree = "<group>"; };
+		E778192A29F34CF100B3AF36 /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
+		E778192C29F3565F00B3AF36 /* houses_page2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses_page2.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				E778190229F3146600B3AF36 /* characters.json */,
-				E778190329F3146600B3AF36 /* houses.json */,
+				E778190329F3146600B3AF36 /* houses_page1.json */,
+				E778192C29F3565F00B3AF36 /* houses_page2.json */,
 				E778190429F3146600B3AF36 /* character894.json */,
 				E778190529F3146600B3AF36 /* house7.json */,
 			);
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				E778192129F33A4B00B3AF36 /* Entities */,
+				E778192929F34CDD00B3AF36 /* Extensions */,
 				E778191E29F33A2200B3AF36 /* Networking */,
 			);
 			path = Shared;
@@ -245,6 +251,14 @@
 				E77818F729F3145900B3AF36 /* HouseDetailView.swift */,
 			);
 			path = HouseDetail;
+			sourceTree = "<group>";
+		};
+		E778192929F34CDD00B3AF36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E778192A29F34CF100B3AF36 /* String+Regex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,8 +375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E778190B29F3146600B3AF36 /* character894.json in Resources */,
-				E778190A29F3146600B3AF36 /* houses.json in Resources */,
+				E778190A29F3146600B3AF36 /* houses_page1.json in Resources */,
 				E778190C29F3146600B3AF36 /* house7.json in Resources */,
+				E778192D29F356D700B3AF36 /* houses_page2.json in Resources */,
 				E778190929F3146600B3AF36 /* characters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +398,7 @@
 			files = (
 				E77818FB29F3145900B3AF36 /* House.swift in Sources */,
 				E77818FF29F3145900B3AF36 /* HousesListView.swift in Sources */,
+				E778192B29F34CF100B3AF36 /* String+Regex.swift in Sources */,
 				E778191229F31B1E00B3AF36 /* HTTPClient.swift in Sources */,
 				E778191129F31B1E00B3AF36 /* HTTPMethod.swift in Sources */,
 				E77818CD29F3140F00B3AF36 /* IceAndFireApp.swift in Sources */,

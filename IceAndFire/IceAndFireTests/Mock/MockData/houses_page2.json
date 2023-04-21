@@ -1,0 +1,582 @@
+[
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/21",
+        "name": "House Bigglestone",
+        "region": "The Riverlands",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": []
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/22",
+        "name": "House Blackbar of Bandallon",
+        "region": "The Reach",
+        "coatOfArms": "Argent, a fess sable",
+        "words": "",
+        "titles": [
+            "Lord of Bandallon"
+        ],
+        "seats": [
+            "Bandallon"
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/398",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/621"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/23",
+        "name": "House Blackfyre of King's Landing",
+        "region": "",
+        "coatOfArms": "Gules, a three headed dragon breathing flames sable",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/378",
+        "founded": "184 AC",
+        "founder": "https://www.anapioficeandfire.com/api/characters/267",
+        "diedOut": "260 AC",
+        "ancestralWeapons": [
+            "Blackfyre"
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/8",
+            "https://www.anapioficeandfire.com/api/characters/35",
+            "https://www.anapioficeandfire.com/api/characters/47",
+            "https://www.anapioficeandfire.com/api/characters/50",
+            "https://www.anapioficeandfire.com/api/characters/83",
+            "https://www.anapioficeandfire.com/api/characters/226",
+            "https://www.anapioficeandfire.com/api/characters/267",
+            "https://www.anapioficeandfire.com/api/characters/268",
+            "https://www.anapioficeandfire.com/api/characters/697",
+            "https://www.anapioficeandfire.com/api/characters/920",
+            "https://www.anapioficeandfire.com/api/characters/1462",
+            "https://www.anapioficeandfire.com/api/characters/2021"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/24",
+        "name": "House Blackmont of Blackmont",
+        "region": "Dorne",
+        "coatOfArms": "A black vulture with a pink infant in its claws, on yellow",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            "Blackmont"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/1607",
+        "heir": "https://www.anapioficeandfire.com/api/characters/1574",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/285",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/1574",
+            "https://www.anapioficeandfire.com/api/characters/1607",
+            "https://www.anapioficeandfire.com/api/characters/1810"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/25",
+        "name": "House Blackmyre",
+        "region": "The Neck",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/318",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": []
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/26",
+        "name": "House Blacktyde of Blacktyde",
+        "region": "Iron Islands",
+        "coatOfArms": "Vairy vert and sable",
+        "words": "",
+        "titles": [
+            "Lord of Blacktyde"
+        ],
+        "seats": [
+            "Blacktyde"
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/169",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/158",
+            "https://www.anapioficeandfire.com/api/characters/191"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/27",
+        "name": "House Blackwood of Raventree Hall",
+        "region": "The Riverlands",
+        "coatOfArms": "A flock of ravens surrounding a black shield charged with a dead weirwood, on a scarlet field(Gules, on an escutcheon sable a dead weirwood tree proper, all within an orle of ravens volant sable)",
+        "words": "",
+        "titles": [
+            "Lord of Raventree"
+        ],
+        "seats": [
+            "Raventree Hall"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/2045",
+        "heir": "https://www.anapioficeandfire.com/api/characters/1241",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/10",
+        "founded": "Age of Heroes",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/108",
+            "https://www.anapioficeandfire.com/api/characters/195",
+            "https://www.anapioficeandfire.com/api/characters/737",
+            "https://www.anapioficeandfire.com/api/characters/744",
+            "https://www.anapioficeandfire.com/api/characters/843",
+            "https://www.anapioficeandfire.com/api/characters/1241",
+            "https://www.anapioficeandfire.com/api/characters/1640",
+            "https://www.anapioficeandfire.com/api/characters/2045"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/28",
+        "name": "House Blanetree",
+        "region": "The Riverlands",
+        "coatOfArms": "Green and brown maple leaves, strewn across a yellow field(Or, semé of maple leaves vert and tenné)",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/395",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/1135"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/29",
+        "name": "House Blount",
+        "region": "The Crownlands",
+        "coatOfArms": "A red bend sinister between two black porcupines, on a green field(Vert, a bend sinister gules between two porcupines sable)",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/16",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/202"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/30",
+        "name": "House Boggs",
+        "region": "The North",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/318",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": []
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/31",
+        "name": "House Boggs of Crackclaw Point",
+        "region": "The Crownlands",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/16",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/1726"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/32",
+        "name": "House Bole",
+        "region": "The North",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/150",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": []
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/33",
+        "name": "House Bolling",
+        "region": "The Stormlands",
+        "coatOfArms": "Vairy orange and blue, upon a black canton, a golden stag beneath an orange bend sinister(Vairy tenné and azure, on a canton sable a stag or debruised by a bend sinister of the first)",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/17",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/491"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/34",
+        "name": "House Bolton of the Dreadfort",
+        "region": "The North",
+        "coatOfArms": "A red flayed man on pink de sang",
+        "words": "Our Blades are Sharp",
+        "titles": [
+            "Red King (Age of Heroes)",
+            "Lord of the Dreadfort",
+            "Warden of the North"
+        ],
+        "seats": [
+            "The Dreadfort"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/933",
+        "heir": "https://www.anapioficeandfire.com/api/characters/849",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/16",
+        "founded": "Age of Heroes",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/196",
+            "https://www.anapioficeandfire.com/api/characters/314",
+            "https://www.anapioficeandfire.com/api/characters/849",
+            "https://www.anapioficeandfire.com/api/characters/933",
+            "https://www.anapioficeandfire.com/api/characters/1084",
+            "https://www.anapioficeandfire.com/api/characters/1159",
+            "https://www.anapioficeandfire.com/api/characters/1208",
+            "https://www.anapioficeandfire.com/api/characters/1313",
+            "https://www.anapioficeandfire.com/api/characters/1329",
+            "https://www.anapioficeandfire.com/api/characters/1452",
+            "https://www.anapioficeandfire.com/api/characters/1492",
+            "https://www.anapioficeandfire.com/api/characters/1648",
+            "https://www.anapioficeandfire.com/api/characters/1747",
+            "https://www.anapioficeandfire.com/api/characters/1949",
+            "https://www.anapioficeandfire.com/api/characters/2077"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/35",
+        "name": "House Borrell of Sweetsister",
+        "region": "The Vale",
+        "coatOfArms": "A white spider crab, on a grey-green field(Vert-cendrée, a spider crab argent)",
+        "words": "",
+        "titles": [
+            "Lord of Sweetsister"
+        ],
+        "seats": [
+            "Breakwater in Sisterton"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/429",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/370",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/429"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/36",
+        "name": "House Botley of Lordsport",
+        "region": "Iron Islands",
+        "coatOfArms": "Vert, semy of fishes argent",
+        "words": "",
+        "titles": [
+            "Lord of Lordsport"
+        ],
+        "seats": [
+            "Lordsport"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/419",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/169",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/163",
+            "https://www.anapioficeandfire.com/api/characters/185",
+            "https://www.anapioficeandfire.com/api/characters/419",
+            "https://www.anapioficeandfire.com/api/characters/468",
+            "https://www.anapioficeandfire.com/api/characters/474",
+            "https://www.anapioficeandfire.com/api/characters/661",
+            "https://www.anapioficeandfire.com/api/characters/717",
+            "https://www.anapioficeandfire.com/api/characters/835",
+            "https://www.anapioficeandfire.com/api/characters/958",
+            "https://www.anapioficeandfire.com/api/characters/961",
+            "https://www.anapioficeandfire.com/api/characters/1003",
+            "https://www.anapioficeandfire.com/api/characters/1039",
+            "https://www.anapioficeandfire.com/api/characters/1071",
+            "https://www.anapioficeandfire.com/api/characters/2097"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/37",
+        "name": "House Bracken of Stone Hedge",
+        "region": "The Riverlands",
+        "coatOfArms": "A red stallion upon a gold shield, on a brown field(Tenné, on an escutcheon or a stallion rampant gules)",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            "Stone Hedge"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/1559",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/10",
+        "founded": "Age of Heroes",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/47",
+            "https://www.anapioficeandfire.com/api/characters/165",
+            "https://www.anapioficeandfire.com/api/characters/197",
+            "https://www.anapioficeandfire.com/api/characters/807",
+            "https://www.anapioficeandfire.com/api/characters/1160",
+            "https://www.anapioficeandfire.com/api/characters/1187",
+            "https://www.anapioficeandfire.com/api/characters/1212",
+            "https://www.anapioficeandfire.com/api/characters/1259",
+            "https://www.anapioficeandfire.com/api/characters/1496",
+            "https://www.anapioficeandfire.com/api/characters/1537",
+            "https://www.anapioficeandfire.com/api/characters/1559",
+            "https://www.anapioficeandfire.com/api/characters/1596",
+            "https://www.anapioficeandfire.com/api/characters/1624",
+            "https://www.anapioficeandfire.com/api/characters/1710"
+        ]
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/38",
+        "name": "House Branch",
+        "region": "The North",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/150",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": []
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/39",
+        "name": "House Branfield",
+        "region": "The North",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            "exiles living at Ironrath"
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": []
+    },
+    {
+        "url": "https://www.anapioficeandfire.com/api/houses/40",
+        "name": "House Brax of Hornvale",
+        "region": "The Westerlands",
+        "coatOfArms": "A purple unicorn, on a silver field(Argent, a unicorn rampant purpure)",
+        "words": "",
+        "titles": [
+            ""
+        ],
+        "seats": [
+            "Hornvale"
+        ],
+        "currentLord": "https://www.anapioficeandfire.com/api/characters/1055",
+        "heir": "https://www.anapioficeandfire.com/api/characters/393",
+        "overlord": "https://www.anapioficeandfire.com/api/houses/229",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+            ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+            "https://www.anapioficeandfire.com/api/characters/120",
+            "https://www.anapioficeandfire.com/api/characters/236",
+            "https://www.anapioficeandfire.com/api/characters/393",
+            "https://www.anapioficeandfire.com/api/characters/574",
+            "https://www.anapioficeandfire.com/api/characters/765",
+            "https://www.anapioficeandfire.com/api/characters/896",
+            "https://www.anapioficeandfire.com/api/characters/897",
+            "https://www.anapioficeandfire.com/api/characters/941",
+            "https://www.anapioficeandfire.com/api/characters/1055",
+            "https://www.anapioficeandfire.com/api/characters/1088"
+        ]
+    }
+]

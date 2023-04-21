@@ -25,6 +25,14 @@ struct HousesListView: View {
                     Text(item.name)
                 }
             }
+            
+            if viewModel.isMoreAvailable && !viewModel.isLoading {
+                Color.clear
+                    .frame(height: 1)
+                    .onAppear {
+                        viewModel.loadMore()
+                    }
+            }
         }
         .navigationTitle("Houses of Ice and Fire")
     }

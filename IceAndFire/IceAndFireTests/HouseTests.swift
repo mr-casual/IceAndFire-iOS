@@ -66,12 +66,12 @@ final class HouseTests: XCTestCase {
     }
     
     func testDecodingArrayOfHouses() throws {
-        guard let path = Bundle.iceAndFireTests.path(forResource: "houses", ofType: "json") else {
+        guard let path = Bundle.iceAndFireTests.path(forResource: "houses_page1", ofType: "json") else {
             return XCTFail("Missing mock data: houses.json")
         }
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let houses = try decoder.decode([House].self, from: data)
         
-        XCTAssert(houses.count == 50, "Number of houses should be 50.")
+        XCTAssert(houses.count == 20, "Number of houses should be 50.")
     }
 }
