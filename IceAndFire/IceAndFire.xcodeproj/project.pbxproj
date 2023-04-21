@@ -11,11 +11,12 @@
 		E721F0BF29F074D000709AC9 /* HousesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0BE29F074D000709AC9 /* HousesListView.swift */; };
 		E721F0C129F074D300709AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E721F0C029F074D300709AC9 /* Assets.xcassets */; };
 		E721F0C429F074D300709AC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E721F0C329F074D300709AC9 /* Preview Assets.xcassets */; };
-		E721F0CE29F074D300709AC9 /* IceAndFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0CD29F074D300709AC9 /* IceAndFireTests.swift */; };
+		E721F0CE29F074D300709AC9 /* IceAndFireServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0CD29F074D300709AC9 /* IceAndFireServiceTests.swift */; };
 		E721F0D829F074D300709AC9 /* IceAndFireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0D729F074D300709AC9 /* IceAndFireUITests.swift */; };
 		E721F0DA29F074D300709AC9 /* IceAndFireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0D929F074D300709AC9 /* IceAndFireUITestsLaunchTests.swift */; };
 		E721F0E729F075D100709AC9 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0E629F075D100709AC9 /* HouseDetailView.swift */; };
 		E721F0E929F077CB00709AC9 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0E829F077CB00709AC9 /* House.swift */; };
+		E721F0EC29F0798E00709AC9 /* IceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E721F0EB29F0798E00709AC9 /* IceAndFireService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +43,13 @@
 		E721F0C029F074D300709AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E721F0C329F074D300709AC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E721F0C929F074D300709AC9 /* IceAndFireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceAndFireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E721F0CD29F074D300709AC9 /* IceAndFireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireTests.swift; sourceTree = "<group>"; };
+		E721F0CD29F074D300709AC9 /* IceAndFireServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireServiceTests.swift; sourceTree = "<group>"; };
 		E721F0D329F074D300709AC9 /* IceAndFireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceAndFireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E721F0D729F074D300709AC9 /* IceAndFireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireUITests.swift; sourceTree = "<group>"; };
 		E721F0D929F074D300709AC9 /* IceAndFireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E721F0E629F075D100709AC9 /* HouseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
 		E721F0E829F077CB00709AC9 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		E721F0EB29F0798E00709AC9 /* IceAndFireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				E721F0C029F074D300709AC9 /* Assets.xcassets */,
 				E721F0BC29F074D000709AC9 /* IceAndFireApp.swift */,
 				E721F0E829F077CB00709AC9 /* House.swift */,
+				E721F0EB29F0798E00709AC9 /* IceAndFireService.swift */,
 				E721F0E629F075D100709AC9 /* HouseDetailView.swift */,
 				E721F0BE29F074D000709AC9 /* HousesListView.swift */,
 				E721F0C229F074D300709AC9 /* Preview Content */,
@@ -119,7 +122,7 @@
 		E721F0CC29F074D300709AC9 /* IceAndFireTests */ = {
 			isa = PBXGroup;
 			children = (
-				E721F0CD29F074D300709AC9 /* IceAndFireTests.swift */,
+				E721F0CD29F074D300709AC9 /* IceAndFireServiceTests.swift */,
 			);
 			path = IceAndFireTests;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				E721F0BF29F074D000709AC9 /* HousesListView.swift in Sources */,
 				E721F0BD29F074D000709AC9 /* IceAndFireApp.swift in Sources */,
+				E721F0EC29F0798E00709AC9 /* IceAndFireService.swift in Sources */,
 				E721F0E929F077CB00709AC9 /* House.swift in Sources */,
 				E721F0E729F075D100709AC9 /* HouseDetailView.swift in Sources */,
 			);
@@ -274,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E721F0CE29F074D300709AC9 /* IceAndFireTests.swift in Sources */,
+				E721F0CE29F074D300709AC9 /* IceAndFireServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,19 +7,24 @@
 
 import SwiftUI
 
+struct ListItem<T>: Identifiable {
+    let id = UUID()
+    let content: T
+}
+
 struct HousesListView: View {
     
-    let houses: [House] = [.init(name: "House Algood"),
-                           .init(name: "House Allyrion of Godsgrace"),
-                           .init(name: "House Amber")]
+    let houses: [ListItem<String>] = [.init(content: "House Algood"),
+                                      .init(content: "House Allyrion of Godsgrace"),
+                                      .init(content: "House Amber")]
     
     var body: some View {
         List {
-            ForEach(houses) { house in
+            ForEach(houses) { item in
                 NavigationLink {
-                    HouseDetailView(house: house)
+                    HouseDetailView(house: item.content)
                 } label: {
-                    Text(house.name)
+                    Text(item.content)
                 }
             }
         }
