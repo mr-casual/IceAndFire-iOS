@@ -8,48 +8,32 @@
 import Foundation
 
 protocol AnyIceAndFireService {
-    func fetchHouses() async -> Result<[House], Error>
+    func fetchHouses() async -> Result<[House], RequestError>
+    func fetchHouse(from url: URL) async -> Result<House, RequestError>
+    func fetchCharacter(from url: URL) async -> Result<Character, RequestError>
 }
 
-class IceAndFireService {
-    
-    private let urlSession: URLSession
+class IceAndFireService: AnyIceAndFireService {
+
+    private let httpClient: HTTPClient
     private let baseURL = URL(string: "https://www.anapioficeandfire.com/api/")!
-    private let decoder = JSONDecoder()
-    
+
     init(urlSession: URLSession) {
-        self.urlSession = urlSession
+        self.httpClient = .init(urlSession: urlSession, decoder: JSONDecoder())
     }
-    
-    func fetchHouses() async -> Result<[House], Error> {
+
+    func fetchHouses() async -> Result<[House], RequestError> {
         let url = baseURL.appendingPathComponent("houses")
-        
-        let request = URLRequest(url: url)
-        do {
-            let (data, _) = try await urlSession.data(for: request)
-            return .success(try decoder.decode([House].self, from: data))
-        } catch {
-            return .failure(error)
-        }
+        return await httpClient.GET(url)
     }
-    
-    func fetchHouse(from url: URL) async -> Result<House, Error> {
+
+    func fetchHouse(from url: URL) async -> Result<House, RequestError> {
         let request = URLRequest(url: url)
-        do {
-            let (data, _) = try await urlSession.data(for: request)
-            return .success(try decoder.decode(House.self, from: data))
-        } catch {
-            return .failure(error)
-        }
+        return await httpClient.GET(url)
     }
-    
-    func fetchCharacter(from url: URL) async -> Result<Character, Error> {
+
+    func fetchCharacter(from url: URL) async -> Result<Character, RequestError> {
         let request = URLRequest(url: url)
-        do {
-            let (data, _) = try await urlSession.data(for: request)
-            return .success(try decoder.decode(Character.self, from: data))
-        } catch {
-            return .failure(error)
-        }
+        return await httpClient.GET(url)
     }
 }
