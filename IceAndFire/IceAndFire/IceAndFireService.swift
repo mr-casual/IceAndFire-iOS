@@ -42,4 +42,14 @@ class IceAndFireService {
             return .failure(error)
         }
     }
+    
+    func fetchCharacter(from url: URL) async -> Result<Character, Error> {
+        let request = URLRequest(url: url)
+        do {
+            let (data, _) = try await urlSession.data(for: request)
+            return .success(try decoder.decode(Character.self, from: data))
+        } catch {
+            return .failure(error)
+        }
+    }
 }
