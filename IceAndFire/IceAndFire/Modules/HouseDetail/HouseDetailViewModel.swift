@@ -25,9 +25,12 @@ class HouseDetailViewModel: ObservableObject {
     func loadDetails() async {
         switch details {
         case .loading, .content:
-            return
+            return // do not load a twice
         default: break
         }
+        
+        details = .loading
+        
         // create future for each partial resource
         let currentLordFuture = service.characterPublisher(url: house.currentLordURL)
         let heirFuture = service.characterPublisher(url: house.heirURL)

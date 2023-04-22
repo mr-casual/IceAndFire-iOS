@@ -42,6 +42,33 @@ final class HouseDetailViewModelTests: XCTestCase {
         
         XCTAssert(isValid, "House details invalid.")
     }
+    
+    @MainActor func testIsLoading() async throws {
+        // setup mock
+        service.loading = true
+        
+        let expectation = expectation(description: "isLoading")
+        
+        // load first page
+        let viewModel = HouseDetailViewModel(house: .Mock.house7, service: service)
+        var isLoading: Bool = viewModel.details.isLoading
+        Task {
+            await viewModel.loadDetails()
+        }
+        
+        viewModel.$details
+            .filter { $0.isLoading }
+            .sink { _ in
+                isLoading = true
+                expectation.fulfill()
+            }
+            .store(in: &subscriptions)
+        
+        await fulfillment(of: [expectation], timeout: 1)
+        
+        // view model should
+        XCTAssert(isLoading, "`isLoading` should be true")
+    }
 }
 
 extension ContentState {
