@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "AC0B6212-0FED-487E-AA4E-A47A74A3412A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:IceAndFire.xcodeproj",
+      "identifier" : "E77818C829F3140F00B3AF36",
+      "name" : "IceAndFire"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:IceAndFire.xcodeproj",
+        "identifier" : "E77818D829F3141300B3AF36",
+        "name" : "IceAndFireTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:IceAndFire.xcodeproj",
+        "identifier" : "E77818E229F3141300B3AF36",
+        "name" : "IceAndFireUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
