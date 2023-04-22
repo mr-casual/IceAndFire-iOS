@@ -10,9 +10,10 @@ import Foundation
 @MainActor
 class HousesListViewModel: ObservableObject {
     
-    @Published var house: [House] = []
+    @Published var houses: [House] = []
     @Published var isMoreAvailable: Bool = true
     @Published var isLoading: Bool = false
+    @Published var errorText: String?
     
     private var nextPage: URL? {
         didSet {
@@ -25,17 +26,17 @@ class HousesListViewModel: ObservableObject {
         self.service = service
     }
     
-    func loadMore() {
+    func loadMore() async {
         isLoading = true
-        Task {
-            switch await service.fetchHouses(from: nextPage) {
-            case .success(let page):
-                house.append(contentsOf: page.items)
-                nextPage = page.nextPage
-            case .failure(let error):
-                print("Fetching houses failed: \(error.localizedDescription)")
-            }
-            isLoading = false
+        switch await service.fetchHouses(from: nextPage) {
+        case .success(let page):
+            houses.append(contentsOf: page.items)
+            nextPage = page.nextPage
+            errorText = nil
+        case .failure(let error):
+            print("Fetching houses failed: \(error.localizedDescription)")
+            errorText = error.presentation
         }
+        isLoading = false
     }
 }

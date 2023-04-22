@@ -7,22 +7,17 @@
 
 import SwiftUI
 
-struct ListItem<T>: Identifiable {
-    let id = UUID()
-    let content: T
-}
-
 struct HousesListView: View {
     
     @StateObject var viewModel: HousesListViewModel
 
     var body: some View {
         List {
-            ForEach(viewModel.house, id: \.self) { item in
+            ForEach(viewModel.houses, id: \.self) { house in
                 NavigationLink {
-                    HouseDetailView(viewModel: HouseDetailViewModel(house: item.name))
+                    HouseDetailView(viewModel: HouseDetailViewModel(house: house.name))
                 } label: {
-                    Text(item.name)
+                    Text(house.name)
                 }
             }
             
@@ -30,15 +25,25 @@ struct HousesListView: View {
                 HStack {
                     Spacer()
                     ProgressView()
+                        .padding(16)
                     Spacer()
                 }
-            }
-            
-            if viewModel.isMoreAvailable && !viewModel.isLoading {
+            } else if let errorText = viewModel.errorText {
+                VStack(alignment: .center, spacing: 16) {
+                    Text(errorText)
+                        .multilineTextAlignment(.center)
+                    Button("Retry") {
+                        Task { await viewModel.loadMore() }
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+                .alignCentered()
+                .padding(16)
+            } else if viewModel.isMoreAvailable {
                 Color.clear
                     .frame(height: 1)
                     .onAppear {
-                        viewModel.loadMore()
+                        Task { await viewModel.loadMore() }
                     }
             }
         }
