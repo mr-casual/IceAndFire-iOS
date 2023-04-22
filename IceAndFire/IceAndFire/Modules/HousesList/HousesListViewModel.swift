@@ -26,6 +26,7 @@ class HousesListViewModel: ObservableObject {
     }
     
     func loadMore() {
+        isLoading = true
         Task {
             switch await service.fetchHouses(from: nextPage) {
             case .success(let page):
@@ -34,6 +35,7 @@ class HousesListViewModel: ObservableObject {
             case .failure(let error):
                 print("Fetching houses failed: \(error.localizedDescription)")
             }
+            isLoading = false
         }
     }
 }

@@ -26,6 +26,14 @@ struct HousesListView: View {
                 }
             }
             
+            if viewModel.isLoading {
+                HStack {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                }
+            }
+            
             if viewModel.isMoreAvailable && !viewModel.isLoading {
                 Color.clear
                     .frame(height: 1)
