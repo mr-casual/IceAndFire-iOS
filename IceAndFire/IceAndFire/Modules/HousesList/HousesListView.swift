@@ -15,7 +15,8 @@ struct HousesListView: View {
         List {
             ForEach(viewModel.houses, id: \.self) { house in
                 NavigationLink {
-                    HouseDetailView(viewModel: HouseDetailViewModel(house: house.name))
+                    HouseDetailView(viewModel: .init(house: house,
+                                                     service: viewModel.service))
                 } label: {
                     Text(house.name)
                 }

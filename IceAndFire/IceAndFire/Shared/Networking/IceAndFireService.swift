@@ -12,7 +12,7 @@ struct PageResponse<T> {
     let nextPage: URL?
 }
 
-protocol AnyIceAndFireService {
+protocol AnyIceAndFireService: AnyObject {
     func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError>
     func fetchHouse(from url: URL) async -> Result<House, RequestError>
     func fetchCharacter(from url: URL) async -> Result<Character, RequestError>

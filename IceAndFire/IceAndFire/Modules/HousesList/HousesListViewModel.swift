@@ -15,12 +15,14 @@ class HousesListViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorText: String?
     
+    let service: AnyIceAndFireService
+
+    
     private var nextPage: URL? {
         didSet {
             isMoreAvailable = nextPage != nil
         }
     }
-    private let service: AnyIceAndFireService
     
     init(service: AnyIceAndFireService) {
         self.service = service
