@@ -1,0 +1,31 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/540",
+    "name": "Jasper Arryn",
+    "gender": "Male",
+    "culture": "",
+    "born": "",
+    "died": "",
+    "titles": [
+        "Lord of the Eyrie Defender of the Vale",
+        "Warden of the East"
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/5"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

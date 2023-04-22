@@ -1,0 +1,34 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/1715",
+    "name": "Mord",
+    "gender": "Male",
+    "culture": "",
+    "born": "",
+    "died": "",
+    "titles": [
+        ""
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/1",
+        "https://www.anapioficeandfire.com/api/books/2",
+        "https://www.anapioficeandfire.com/api/books/3",
+        "https://www.anapioficeandfire.com/api/books/5",
+        "https://www.anapioficeandfire.com/api/books/8"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        "Season 1"
+    ],
+    "playedBy": [
+        "Ciaran Birmingham"
+    ]
+}

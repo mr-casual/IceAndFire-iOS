@@ -20,16 +20,12 @@ final class HousesListViewModelTests: XCTestCase {
     }
     
     @MainActor func testLoadingFirstPage() async throws {
-        // setup mock
-        let testHouses = try House.Mock.page1()
-        service.mockHouses = { _ in
-            return .success(.init(items: testHouses, nextPage: nil))
-        }
         // load first page
         let viewModel = HousesListViewModel(service: service)
         await viewModel.loadMore()
         
         // validate loaded houses
+        let testHouses = try House.Mock.page1()
         XCTAssertEqual(viewModel.houses, testHouses, "`houses` doesn't match expected test data.")
     }
     
@@ -61,12 +57,6 @@ final class HousesListViewModelTests: XCTestCase {
     }
     
     @MainActor func testIsMoreAvailable() async throws {
-        // setup mock
-        let testHouses = try House.Mock.page1()
-        service.mockHouses = { _ in
-            let nextPage = URL(string: "https://www.anapioficeandfire.com/api/houses?page=2&pageSize=20")!
-            return .success(.init(items: testHouses, nextPage: nextPage))
-        }
         // load first page
         let viewModel = HousesListViewModel(service: service)
         await viewModel.loadMore()
@@ -76,23 +66,15 @@ final class HousesListViewModelTests: XCTestCase {
     }
     
     @MainActor func testLoadingNextPage() async throws {
-        // setup mock for first page
-        let page1 = try House.Mock.page1()
-        service.mockHouses = { _ in
-            let nextPage = URL(string: "https://www.anapioficeandfire.com/api/houses?page=2&pageSize=20")!
-            return .success(.init(items: page1, nextPage: nextPage))
-        }
         // load first page
         let viewModel = HousesListViewModel(service: service)
         await viewModel.loadMore()
-        
-        // setup mock for second page
-        let page2 = try House.Mock.page2()
-        service.mockHouses = { _ in
-            return .success(.init(items: page2, nextPage: nil))
-        }
+
         // load second page
         await viewModel.loadMore()
+        
+        let page1 = try House.Mock.page1()
+        let page2 = try House.Mock.page2()
         
         XCTAssertEqual(viewModel.houses, page1+page2, "`houses` doesn't match expected test data.")
         XCTAssertFalse(viewModel.isMoreAvailable, "`isMoreAvailable` should be false")

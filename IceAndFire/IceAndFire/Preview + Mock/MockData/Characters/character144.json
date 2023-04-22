@@ -1,0 +1,30 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/144",
+    "name": "Artys I Arryn",
+    "gender": "Male",
+    "culture": "Andal",
+    "born": ", at Giant's Lance",
+    "died": "",
+    "titles": [
+        "King of Mountain and Vale",
+        "Ser"
+    ],
+    "aliases": [
+        "Falcon Knight",
+        "Winged Knight"
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/11"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/1068",
+    "name": "Vardis Egen",
+    "gender": "Male",
+    "culture": "Valemen",
+    "born": "In or between 249 AC and 253 AC",
+    "died": "In 298 AC, at the Eyrie",
+    "titles": [
+        "Ser",
+        "Captain of the Guards"
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7",
+        "https://www.anapioficeandfire.com/api/houses/113"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/1",
+        "https://www.anapioficeandfire.com/api/books/2",
+        "https://www.anapioficeandfire.com/api/books/3"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        "Season 1"
+    ],
+    "playedBy": [
+        "Brendan McCormack"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/1884",
+    "name": "Rodrik Arryn",
+    "gender": "Male",
+    "culture": "",
+    "born": "",
+    "died": "",
+    "titles": [
+        "Lord of the Eyrie"
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "https://www.anapioficeandfire.com/api/characters/265",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/9",
+        "https://www.anapioficeandfire.com/api/books/10",
+        "https://www.anapioficeandfire.com/api/books/11"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

@@ -11,16 +11,38 @@ class MockIceAndFireService: AnyIceAndFireService {
     
     var loading: Bool = false
     
-    var mockHouses: (URL?) -> Result<PageResponse<House>, RequestError> = { _ in
-        return .success(.init(items: (try? House.Mock.page1()) ?? [], nextPage: nil))
+    var mockHouses: (URL?) -> Result<PageResponse<House>, RequestError> = { url in
+        let secondPage = URL(string: "https://www.anapioficeandfire.com/api/houses?page=2&pageSize=20")!
+        switch url {
+        case .none:
+            return .success(.init(items: (try? House.Mock.page1()) ?? [], nextPage: secondPage))
+        case secondPage:
+            return .success(.init(items: (try? House.Mock.page2()) ?? [], nextPage: nil))
+        default:
+            return .success(.init(items: [], nextPage: nil))
+        }
     }
     
-    var mockHouse: (URL) -> Result<House, RequestError> = { _ in
-        return .success(.Mock.house7)
+    var mockHouse: (URL) -> Result<House, RequestError> = { url in
+        let urlPattern = #"https:\/\/www.anapioficeandfire.com\/api\/houses\/(.+)"#
+        guard let id = url.absoluteString.matchGroups(regex: urlPattern).first,
+              let path = Bundle.main.path(forResource: "house\(id)", ofType: "json"),
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
+              let house = try? JSONDecoder().decode(House.self, from: data) else {
+            return .failure(.unknow(nil, data: nil))
+        }
+        return .success(house)
     }
     
-    var mockCharacter: (URL) -> Result<Character, RequestError> = { _ in
-        return .success(.Mock.character894)
+    var mockCharacter: (URL) -> Result<Character, RequestError> = { url in
+        let urlPattern = #"https:\/\/www.anapioficeandfire.com\/api\/characters\/(.+)"#
+        guard let id = url.absoluteString.matchGroups(regex: urlPattern).first,
+              let path = Bundle.main.path(forResource: "character\(id)", ofType: "json"),
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
+              let character = try? JSONDecoder().decode(Character.self, from: data) else {
+            return .failure(.unknow(nil, data: nil))
+        }
+        return .success(character)
     }
     
     func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError> {

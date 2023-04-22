@@ -1,0 +1,38 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/572",
+    "name": "Jon Arryn",
+    "gender": "Male",
+    "culture": "Valemen",
+    "born": "In or between 217 AC and 220 AC (roughly), at the Eyrie",
+    "died": "In 298 AC, at King's Landing",
+    "titles": [
+        "Lord of the Eyrie",
+        "Defender of the Vale",
+        "Warden of the East",
+        "Hand of the King"
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "https://www.anapioficeandfire.com/api/characters/558",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/1",
+        "https://www.anapioficeandfire.com/api/books/2",
+        "https://www.anapioficeandfire.com/api/books/3",
+        "https://www.anapioficeandfire.com/api/books/5",
+        "https://www.anapioficeandfire.com/api/books/8",
+        "https://www.anapioficeandfire.com/api/books/11"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        "Season 1"
+    ],
+    "playedBy": [
+        "John Standing"
+    ]
+}

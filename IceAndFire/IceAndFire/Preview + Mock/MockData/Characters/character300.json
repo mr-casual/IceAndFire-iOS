@@ -1,0 +1,32 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/300",
+    "name": "Denys Arryn",
+    "gender": "Male",
+    "culture": "",
+    "born": "",
+    "died": "In 283 AC, at Stoney Sept",
+    "titles": [
+        "Ser",
+        "Keeper of the Gates of the Moon"
+    ],
+    "aliases": [
+        "The Darling of the Vale"
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/3",
+        "https://www.anapioficeandfire.com/api/books/5"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

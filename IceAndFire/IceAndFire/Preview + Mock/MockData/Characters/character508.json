@@ -1,0 +1,30 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/508",
+    "name": "Hugh",
+    "gender": "Male",
+    "culture": "Valemen",
+    "born": "",
+    "died": "In 298 AC, at King's Landing",
+    "titles": [
+        "Ser"
+    ],
+    "aliases": [
+        "Ser Hugh of the Vale"
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/1"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

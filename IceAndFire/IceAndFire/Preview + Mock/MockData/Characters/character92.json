@@ -1,0 +1,31 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/92",
+    "name": "Alys Arryn",
+    "gender": "Female",
+    "culture": "",
+    "born": "In or between 218 AC and 249 AC",
+    "died": "",
+    "titles": [
+        ""
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "https://www.anapioficeandfire.com/api/characters/373",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7",
+        "https://www.anapioficeandfire.com/api/houses/417"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/5"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

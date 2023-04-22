@@ -1,0 +1,41 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/223",
+    "name": "Brynden Tully",
+    "gender": "Male",
+    "culture": "Rivermen",
+    "born": "In or between 242 AC and 245 AC",
+    "died": "",
+    "titles": [
+        "Ser",
+        "Warden of the Southern Marches",
+        "Knight of the Gate (formerly)"
+    ],
+    "aliases": [
+        "Blackfish",
+        "Ser Brynden the Blackfish",
+        "Brynden Blackfish"
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7",
+        "https://www.anapioficeandfire.com/api/houses/395"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/1",
+        "https://www.anapioficeandfire.com/api/books/2",
+        "https://www.anapioficeandfire.com/api/books/3",
+        "https://www.anapioficeandfire.com/api/books/5",
+        "https://www.anapioficeandfire.com/api/books/8"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        "Season 3",
+        "Season 4",
+        "Season 6"
+    ],
+    "playedBy": [
+        "Clive Russell"
+    ]
+}

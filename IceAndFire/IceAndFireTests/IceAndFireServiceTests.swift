@@ -29,7 +29,7 @@ final class IceAndFireServiceTests: XCTestCase {
                                        statusCode: 200,
                                        httpVersion: nil,
                                        headerFields: nil)
-        let path = Bundle.iceAndFireTests.path(forResource: "houses_page1", ofType: "json")!
+        let path = Bundle.main.path(forResource: "houses_page1", ofType: "json")!
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         MockURL.addMock(for: url, result: .success((response, data)))
         
@@ -50,7 +50,7 @@ final class IceAndFireServiceTests: XCTestCase {
                                        statusCode: 200,
                                        httpVersion: nil,
                                        headerFields: nil)
-        let path = Bundle.iceAndFireTests.path(forResource: "houses_page2", ofType: "json")!
+        let path = Bundle.main.path(forResource: "houses_page2", ofType: "json")!
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         MockURL.addMock(for: url, result: .success((response, data)))
         
@@ -71,7 +71,7 @@ final class IceAndFireServiceTests: XCTestCase {
                                        statusCode: 200,
                                        httpVersion: nil,
                                        headerFields: nil)
-        let path = Bundle.iceAndFireTests.path(forResource: "house7", ofType: "json")!
+        let path = Bundle.main.path(forResource: "house7", ofType: "json")!
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         MockURL.addMock(for: url, result: .success((response, data)))
         
@@ -92,7 +92,7 @@ final class IceAndFireServiceTests: XCTestCase {
                                        statusCode: 200,
                                        httpVersion: nil,
                                        headerFields: nil)
-        let path = Bundle.iceAndFireTests.path(forResource: "character894", ofType: "json")!
+        let path = Bundle.main.path(forResource: "character894", ofType: "json")!
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         MockURL.addMock(for: url, result: .success((response, data)))
         

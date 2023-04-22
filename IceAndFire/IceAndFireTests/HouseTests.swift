@@ -13,7 +13,7 @@ final class HouseTests: XCTestCase {
     let decoder = JSONDecoder()
     
     func testDecodingOfSingleHouse() throws {
-        guard let path = Bundle.iceAndFireTests.path(forResource: "house7", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: "house7", ofType: "json") else {
             return XCTFail("Missing mock data: house7.json")
         }
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -23,7 +23,7 @@ final class HouseTests: XCTestCase {
     }
     
     func testDecodingArrayOfHouses() throws {
-        guard let path = Bundle.iceAndFireTests.path(forResource: "houses_page1", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: "houses_page1", ofType: "json") else {
             return XCTFail("Missing mock data: houses.json")
         }
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)

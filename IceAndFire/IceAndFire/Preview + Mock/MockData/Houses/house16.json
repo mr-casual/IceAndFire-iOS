@@ -1,0 +1,33 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/houses/16",
+    "name": "House Baratheon of King's Landing",
+    "region": "The Crownlands",
+    "coatOfArms": "A black crowned stag and a gold lion, combatant, on a per pale gold and crimson field(Per pale or and gules, a stag, crowned, sable and a lion of the first combatant)",
+    "words": "",
+    "titles": [
+        "Lord of the Seven Kingdoms"
+    ],
+    "seats": [
+        "King's Landing"
+    ],
+    "currentLord": "https://www.anapioficeandfire.com/api/characters/1029",
+    "heir": "https://www.anapioficeandfire.com/api/characters/775",
+    "overlord": "https://www.anapioficeandfire.com/api/houses/15",
+    "founded": "283 AC",
+    "founder": "https://www.anapioficeandfire.com/api/characters/901",
+    "diedOut": "",
+    "ancestralWeapons": [
+        ""
+    ],
+    "cadetBranches": [],
+    "swornMembers": [
+        "https://www.anapioficeandfire.com/api/characters/355",
+        "https://www.anapioficeandfire.com/api/characters/775",
+        "https://www.anapioficeandfire.com/api/characters/1009",
+        "https://www.anapioficeandfire.com/api/characters/1325",
+        "https://www.anapioficeandfire.com/api/characters/1713",
+        "https://www.anapioficeandfire.com/api/characters/1782",
+        "https://www.anapioficeandfire.com/api/characters/1798",
+        "https://www.anapioficeandfire.com/api/characters/1826"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/1693",
+    "name": "Mela",
+    "gender": "Female",
+    "culture": "",
+    "born": "",
+    "died": "",
+    "titles": [
+        ""
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/5",
+        "https://www.anapioficeandfire.com/api/books/8"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}

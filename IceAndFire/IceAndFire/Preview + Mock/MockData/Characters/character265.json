@@ -1,0 +1,33 @@
+{
+    "url": "https://www.anapioficeandfire.com/api/characters/265",
+    "name": "Daella Targaryen",
+    "gender": "Female",
+    "culture": "Valyrian",
+    "born": "In or between 54 AC and 66 AC",
+    "died": "In 82 AC",
+    "titles": [
+        "Princess",
+        "Lady of the Eyrie"
+    ],
+    "aliases": [
+        ""
+    ],
+    "father": "",
+    "mother": "",
+    "spouse": "https://www.anapioficeandfire.com/api/characters/1884",
+    "allegiances": [
+        "https://www.anapioficeandfire.com/api/houses/7",
+        "https://www.anapioficeandfire.com/api/houses/378"
+    ],
+    "books": [
+        "https://www.anapioficeandfire.com/api/books/10",
+        "https://www.anapioficeandfire.com/api/books/11"
+    ],
+    "povBooks": [],
+    "tvSeries": [
+        ""
+    ],
+    "playedBy": [
+        ""
+    ]
+}
