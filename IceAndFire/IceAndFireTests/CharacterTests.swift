@@ -18,13 +18,7 @@ final class CharacterTests: XCTestCase {
         }
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let decodeCharacter = try decoder.decode(Character.self, from: data)
-        let testCharacter = Character(url: .init(string: "https://www.anapioficeandfire.com/api/characters/894"),
-                                      name: "Robert Arryn",
-                                      gender: "Male",
-                                      died: "",
-                                      aliases: ["Sweetrobin",
-                                                "True Warden of the East"],
-                                      playedBy: ["Lino Facioli"])
+        let testCharacter = Character.Mock.character894
         
         XCTAssertEqual(decodeCharacter, testCharacter, "Decoded character doesn't match test data.")
     }

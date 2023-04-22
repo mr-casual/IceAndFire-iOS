@@ -52,9 +52,32 @@ struct HousesListView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static let firstPageService = MockIceAndFireService()
+    static let loadingService: MockIceAndFireService = {
+        let service = MockIceAndFireService()
+        service.loading = true
+        return service
+    }()
+    static let errorService: MockIceAndFireService = {
+        let service = MockIceAndFireService()
+        service.mockHouses = { _ in
+            return .failure(.urlError(.init(.notConnectedToInternet)))
+        }
+        return service
+    }()
+    
     static var previews: some View {
-        NavigationView {
-            HousesListView(viewModel: HousesListViewModel(service: IceAndFireService(urlSession: .shared)))
+        Group {
+            NavigationView {
+                HousesListView(viewModel: HousesListViewModel(service: firstPageService))
+            }
+            NavigationView {
+                HousesListView(viewModel: HousesListViewModel(service: loadingService))
+            }
+            NavigationView {
+                HousesListView(viewModel: HousesListViewModel(service: errorService))
+            }
         }
     }
 }

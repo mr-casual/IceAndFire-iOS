@@ -20,9 +20,9 @@ class HousesListViewModel: ObservableObject {
             isMoreAvailable = nextPage != nil
         }
     }
-    private let service: IceAndFireService
+    private let service: AnyIceAndFireService
     
-    init(service: IceAndFireService) {
+    init(service: AnyIceAndFireService) {
         self.service = service
     }
     
