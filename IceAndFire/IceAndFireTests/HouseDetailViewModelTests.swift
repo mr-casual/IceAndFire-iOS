@@ -62,7 +62,7 @@ final class HouseDetailViewModelTests: XCTestCase {
         XCTAssert(isValid, "House details invalid.")
     }
     
-    @MainActor func testIsLoading() async throws {
+    @MainActor func testIsLoading() throws {
         // setup mock
         service.loading = true
         
@@ -83,7 +83,7 @@ final class HouseDetailViewModelTests: XCTestCase {
             }
             .store(in: &subscriptions)
         
-        await fulfillment(of: [expectation], timeout: 1)
+        waitForExpectations(timeout: 1)
         
         // view model should
         XCTAssert(isLoading, "`isLoading` should be true")
