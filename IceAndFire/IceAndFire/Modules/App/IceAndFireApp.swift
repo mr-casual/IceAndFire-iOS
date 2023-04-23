@@ -10,7 +10,13 @@ import SwiftUI
 @main
 struct IceAndFireApp: App {
     
-    private let service = IceAndFireService(urlSession: .shared)
+    private let service: AnyIceAndFireService = {
+        if ProcessInfo.processInfo.arguments.contains("TESTING") {
+            return MockIceAndFireService()
+        } else {
+            return IceAndFireService(urlSession: .shared)
+        }
+    }()
     
     var body: some Scene {
         WindowGroup {

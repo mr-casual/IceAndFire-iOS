@@ -56,6 +56,8 @@ struct HouseDetailView: View {
             }
             .padding(16)
             .navigationTitle(viewModel.title)
+            .accessibilityElement(children: .contain)
+            .accessibilityIdentifier("HouseDetailView")
         }
     }
 }

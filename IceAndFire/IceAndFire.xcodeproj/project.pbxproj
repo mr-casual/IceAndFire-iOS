@@ -14,6 +14,7 @@
 		E701B7BB29F4C08B00E8EADC /* .github in Resources */ = {isa = PBXBuildFile; fileRef = E701B7BA29F4C08B00E8EADC /* .github */; };
 		E701B7C029F4C3C900E8EADC /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = E701B7BF29F4C3C900E8EADC /* fastlane */; };
 		E701B7C429F4DC2600E8EADC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E701B7C329F4DC2600E8EADC /* .gitignore */; };
+		E701B7C929F4F7FF00E8EADC /* HousesDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7C829F4F7FF00E8EADC /* HousesDetailUITests.swift */; };
 		E72213CE29F40A1B007557C8 /* MockIceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193329F35D5500B3AF36 /* MockIceAndFireService.swift */; };
 		E72213CF29F40DA5007557C8 /* House+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193529F361AE00B3AF36 /* House+Mock.swift */; };
 		E72213D629F40E76007557C8 /* Character+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193729F3634500B3AF36 /* Character+Mock.swift */; };
@@ -102,6 +103,7 @@
 		E701B7BA29F4C08B00E8EADC /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
 		E701B7BF29F4C3C900E8EADC /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../fastlane; sourceTree = "<group>"; };
 		E701B7C329F4DC2600E8EADC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		E701B7C829F4F7FF00E8EADC /* HousesDetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesDetailUITests.swift; sourceTree = "<group>"; };
 		E72213D129F40DDA007557C8 /* houses_page1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses_page1.json; sourceTree = "<group>"; };
 		E72213D229F40DDA007557C8 /* character894.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character894.json; sourceTree = "<group>"; };
 		E72213D329F40DDA007557C8 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				E77818E729F3141300B3AF36 /* IceAndFireUITests.swift */,
+				E701B7C829F4F7FF00E8EADC /* HousesDetailUITests.swift */,
 			);
 			path = IceAndFireUITests;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77818E829F3141300B3AF36 /* IceAndFireUITests.swift in Sources */,
+				E701B7C929F4F7FF00E8EADC /* HousesDetailUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
