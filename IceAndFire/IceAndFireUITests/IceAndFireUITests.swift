@@ -37,7 +37,6 @@ final class HousesListUITests: XCTestCase {
                             "House Blackmont of Blackmont",
                             "House Blackmyre"]
         app.swipeUp()
-        app.swipeUp()
         
         for testExample in testExamples {
             XCTAssert(app.staticTexts[testExample].exists, "Text \"\(testExample)\" should be shown")

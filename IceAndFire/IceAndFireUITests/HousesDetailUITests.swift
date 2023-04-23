@@ -12,16 +12,22 @@ final class HousesDetailUITests: XCTestCase {
     let app = XCUIApplication()
     
     override func setUp() {
-        app.launchArguments += ["TESTING"]
+        if !app.launchArguments.contains("TESTING") {
+            app.launchArguments += ["TESTING"]
+        }
         app.launch()
     }
 
     func testError() throws {
         // navigation
-        app.staticTexts["House Baratheon of King's Landing"].tap()
+        app.staticTexts["House Baratheon of King's Landing"].fixedTap()
 
         // test content
-        XCTAssert(app.buttons["Retry"].exists, "Retry button should be shown.")
+        let retryButton = app.buttons["Retry"]
+        if !retryButton.exists {
+            app.swipeUp()
+        }
+        XCTAssert(retryButton.exists, "Retry button should be shown.")
     }
     
     func testFullDetails() throws {
@@ -54,6 +60,19 @@ final class HousesDetailUITests: XCTestCase {
             let predicate = NSPredicate(format: "label CONTAINS '\(example)'")
             let element = app.staticTexts.containing(predicate).firstMatch
             XCTAssert(element.exists, "Text \"\(example)\" should be shown")
+        }
+    }
+}
+
+extension XCUIElement {
+    func fixedTap() {
+        if self.isHittable {
+            self.tap()
+        } else {
+            let normalized = XCUIApplication().coordinate(withNormalizedOffset: .zero)
+            let offset = CGVector(dx: frame.midX, dy: frame.midY)
+            let coordinate = normalized.withOffset(offset)
+            coordinate.tap()
         }
     }
 }
