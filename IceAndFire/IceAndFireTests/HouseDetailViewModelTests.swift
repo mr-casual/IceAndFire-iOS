@@ -19,9 +19,20 @@ final class HouseDetailViewModelTests: XCTestCase {
         subscriptions.removeAll()
     }
     
-    @MainActor func testHouse() async throws {
+    @MainActor func testTitle() async throws {
         let viewModel = HouseDetailViewModel(house: .Mock.house7, service: service)
-        XCTAssertEqual(viewModel.house, .Mock.house7, "`house` doesn't match expected test data. ")
+        XCTAssertEqual(viewModel.title, "Arryn of the Eyrie", "Wrong title.")
+    }
+    
+    @MainActor func testRegion() async throws {
+        let viewModel = HouseDetailViewModel(house: .Mock.house7, service: service)
+        XCTAssertEqual(viewModel.region, "The Vale", "Wrong title.")
+    }
+    
+    @MainActor func testCoatOfArms() async throws {
+        let viewModel = HouseDetailViewModel(house: .Mock.house7, service: service)
+        let coatOfArms = "A sky-blue falcon soaring against a white moon, on a sky-blue field(Bleu celeste, upon a plate a falcon volant of the field)"
+        XCTAssertEqual(viewModel.coatOfArms, coatOfArms, "Wrong title.")
     }
     
     @MainActor func testLoadDetails() async throws {
@@ -30,16 +41,24 @@ final class HouseDetailViewModelTests: XCTestCase {
         await viewModel.loadDetails()
         
         // validate loaded houses
-        guard let details = viewModel.details.content else {
+        guard let moreDetails = viewModel.moreDetails.content else {
             return XCTFail("Details not loaded.")
         }
-        let isValid = details.currentLord?.name == "Robert Arryn"
-        && details.heir?.name == "Harrold Hardyng"
-        && details.overlord?.name == "House Baratheon of King's Landing"
-        && details.founder?.name == "Artys I Arryn"
-        && details.cadetBranches.count == 1
-        && details.swornMembers.count == 24
+        let currentLordItem = moreDetails.first { $0.title == "Current Lord" }
+        let heirItem = moreDetails.first { $0.title == "Heir" }
+        let overlordItem = moreDetails.first { $0.title == "Overlord" }
+        let founderItem = moreDetails.first { $0.title == "Founder" }
+        let cadetBranchesItem = moreDetails.first { $0.title == "Cadet Branches" }
+        let swornMembersItem = moreDetails.first { $0.title == "Sworn Members" }
         
+        let isValid = (currentLordItem?.value.matches(regex: "Robert Arryn") ?? true)
+        && (heirItem?.value.matches(regex: "Harrold Hardyng") ?? true)
+        && (overlordItem?.value.matches(regex: "Baratheon of King's Landing") ?? true)
+        && (founderItem?.value.matches(regex: "Artys I Arryn") ?? true)
+        && (cadetBranchesItem?.value.matches(regex: "Arryn of Gulltown") ?? true)
+        && (swornMembersItem?.value.matches(regex: "Aemma Arryn") ?? true)
+        && (swornMembersItem?.value.matches(regex: "Rodrik Arryn") ?? true)
+
         XCTAssert(isValid, "House details invalid.")
     }
     
@@ -51,12 +70,12 @@ final class HouseDetailViewModelTests: XCTestCase {
         
         // load first page
         let viewModel = HouseDetailViewModel(house: .Mock.house7, service: service)
-        var isLoading: Bool = viewModel.details.isLoading
+        var isLoading: Bool = viewModel.moreDetails.isLoading
         Task {
             await viewModel.loadDetails()
         }
         
-        viewModel.$details
+        viewModel.$moreDetails
             .filter { $0.isLoading }
             .sink { _ in
                 isLoading = true

@@ -17,13 +17,13 @@ struct House {
     let name: String
 
     /// The region that this house resides in.
-    let region: String
+    let region: String?
 
     /// Text describing the coat of arms of this house.
-    let coatOfArms: String
+    let coatOfArms: String?
 
     ///The words of this house.
-    let words: String
+    let words: String?
 
     /// The titles that this house holds.
     let titles: [String]
@@ -41,14 +41,14 @@ struct House {
     let overlordURL: URL?
 
     /// The year that this house was founded.
-    let founded: String
+    let founded: String?
 
     /// The Character resource URL that founded this house.
     let founderURL: URL?
 
     /// The year that this house died out.
-    let diedOut: String
-
+    let diedOut: String?
+    
     /// An array of names of the noteworthy weapons that this house owns.
     let ancestralWeapons: [String]
 
@@ -68,16 +68,16 @@ extension House: Decodable {
                   name: response.name,
                   region: response.region,
                   coatOfArms: response.coatOfArms,
-                  words: response.words,
-                  titles: response.titles,
-                  seats: response.seats,
+                  words: response.words.isNotEmpty ? response.words : nil,
+                  titles: response.titles.filter(\.isNotEmpty),
+                  seats: response.seats.filter(\.isNotEmpty),
                   currentLordURL: URL(string: response.currentLord),
                   heirURL: URL(string: response.heir),
                   overlordURL: URL(string: response.overlord),
-                  founded: response.founded,
+                  founded: response.founded.isNotEmpty ? response.founded : nil,
                   founderURL: URL(string: response.founder),
-                  diedOut: response.diedOut,
-                  ancestralWeapons: response.ancestralWeapons,
+                  diedOut: response.diedOut.isNotEmpty ? response.diedOut : nil,
+                  ancestralWeapons: response.ancestralWeapons.filter(\.isNotEmpty),
                   cadetBranchesURLs: response.cadetBranches.compactMap { URL(string: $0) },
                   swornMembersURLs: response.swornMembers.compactMap { URL(string: $0) })
     }

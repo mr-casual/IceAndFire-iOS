@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Character: Decodable {
+struct Character {
     
     /// The hypermedia URL of this resource
-    let url: URL?
+    let resourceURL: URL?
     
     /// The name of this character
     let name: String
@@ -19,7 +19,7 @@ struct Character: Decodable {
     let gender: String
     
     /// Textual representation of when and where this character died.
-    let died: String
+    let died: String?
     
     /// The aliases that this character goes by.
     let aliases: [String]
@@ -29,3 +29,24 @@ struct Character: Decodable {
 }
 
 extension Character: Equatable, Hashable {}
+
+extension Character: Decodable {
+    init(from decoder: Decoder) throws {
+        let response = try _CharacterResponse(from: decoder)
+        self.init(resourceURL: URL(string: response.url),
+                  name: response.name,
+                  gender: response.gender,
+                  died: response.died.isNotEmpty ? response.died : nil,
+                  aliases: response.aliases.filter(\.isNotEmpty),
+                  playedBy: response.playedBy.filter(\.isNotEmpty))
+    }
+    
+    private struct _CharacterResponse: Decodable {
+        let url: String
+        let name: String
+        let gender: String
+        let died: String
+        let aliases: [String]
+        let playedBy: [String]
+    }
+}

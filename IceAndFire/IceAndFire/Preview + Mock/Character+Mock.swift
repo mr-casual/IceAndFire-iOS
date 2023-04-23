@@ -10,10 +10,10 @@ import Foundation
 extension Character {
     struct Mock {
         static var character894: Character {
-            Character(url: .init(string: "https://www.anapioficeandfire.com/api/characters/894"),
+            Character(resourceURL: .init(string: "https://www.anapioficeandfire.com/api/characters/894"),
                       name: "Robert Arryn",
                       gender: "Male",
-                      died: "",
+                      died: nil,
                       aliases: ["Sweetrobin",
                                 "True Warden of the East"],
                       playedBy: ["Lino Facioli"])

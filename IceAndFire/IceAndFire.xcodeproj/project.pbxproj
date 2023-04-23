@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E701B7B129F4900000E8EADC /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B029F4900000E8EADC /* String+Helper.swift */; };
+		E701B7B429F4A1B800E8EADC /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B329F4A1B800E8EADC /* DetailItem.swift */; };
+		E701B7B629F4A1F000E8EADC /* DetailPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B529F4A1F000E8EADC /* DetailPresentable.swift */; };
 		E72213CE29F40A1B007557C8 /* MockIceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193329F35D5500B3AF36 /* MockIceAndFireService.swift */; };
 		E72213CF29F40DA5007557C8 /* House+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193529F361AE00B3AF36 /* House+Mock.swift */; };
 		E72213D629F40E76007557C8 /* Character+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193729F3634500B3AF36 /* Character+Mock.swift */; };
@@ -88,6 +91,9 @@
 
 /* Begin PBXFileReference section */
 		E701B7AF29F482AA00E8EADC /* IceAndFire.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = IceAndFire.xctestplan; sourceTree = "<group>"; };
+		E701B7B029F4900000E8EADC /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
+		E701B7B329F4A1B800E8EADC /* DetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
+		E701B7B529F4A1F000E8EADC /* DetailPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresentable.swift; sourceTree = "<group>"; };
 		E72213D129F40DDA007557C8 /* houses_page1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses_page1.json; sourceTree = "<group>"; };
 		E72213D229F40DDA007557C8 /* character894.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character894.json; sourceTree = "<group>"; };
 		E72213D329F40DDA007557C8 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
@@ -178,6 +184,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E701B7B229F4A1AD00E8EADC /* DetailItem */ = {
+			isa = PBXGroup;
+			children = (
+				E701B7B329F4A1B800E8EADC /* DetailItem.swift */,
+				E701B7B529F4A1F000E8EADC /* DetailPresentable.swift */,
+			);
+			path = DetailItem;
+			sourceTree = "<group>";
+		};
 		E72213D029F40DDA007557C8 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +353,7 @@
 		E778192129F33A4B00B3AF36 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E72213EB29F46810007557C8 /* ContentState.swift */,
 				E77818F829F3145900B3AF36 /* Character.swift */,
 				E77818F629F3145900B3AF36 /* House.swift */,
 			);
@@ -364,7 +380,7 @@
 		E778192429F33A8C00B3AF36 /* HouseDetail */ = {
 			isa = PBXGroup;
 			children = (
-				E72213EB29F46810007557C8 /* ContentState.swift */,
+				E701B7B229F4A1AD00E8EADC /* DetailItem */,
 				E72213E529F427B9007557C8 /* HouseDetails.swift */,
 				E77818F729F3145900B3AF36 /* HouseDetailView.swift */,
 				E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */,
@@ -380,6 +396,7 @@
 				E72213E329F41C82007557C8 /* RequestError+Presentation.swift */,
 				E72213E729F46767007557C8 /* Future+Async.swift */,
 				E72213E929F4678E007557C8 /* Result+Helper.swift */,
+				E701B7B029F4900000E8EADC /* String+Helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -560,8 +577,11 @@
 				E72213EC29F46810007557C8 /* ContentState.swift in Sources */,
 				E778192629F33ABC00B3AF36 /* HousesListViewModel.swift in Sources */,
 				E72213EA29F4678E007557C8 /* Result+Helper.swift in Sources */,
+				E701B7B129F4900000E8EADC /* String+Helper.swift in Sources */,
 				E778192829F33AC500B3AF36 /* HouseDetailViewModel.swift in Sources */,
 				E72213E229F41B97007557C8 /* View+Alignment.swift in Sources */,
+				E701B7B629F4A1F000E8EADC /* DetailPresentable.swift in Sources */,
+				E701B7B429F4A1B800E8EADC /* DetailItem.swift in Sources */,
 				E72213CE29F40A1B007557C8 /* MockIceAndFireService.swift in Sources */,
 				E72213E829F46767007557C8 /* Future+Async.swift in Sources */,
 			);

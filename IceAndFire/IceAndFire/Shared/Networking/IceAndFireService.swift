@@ -31,12 +31,7 @@ class IceAndFireService: AnyIceAndFireService {
         let result: HTTPClient.Result<[House]> = await httpClient.GET(url ?? firstPageURL)
         switch result {
         case .success(let success):
-            var nextPage: URL?
-            if let linkHeader = success.response.value(forHTTPHeaderField: "Link"),
-               let nextLinkString = linkHeader.components(separatedBy: ",").first(where: { $0.matches(regex: #"rel="next""#) }),
-               let urlString = nextLinkString.matchGroups(regex: #"<(.+)>"#).first {
-                nextPage = URL(string: urlString)
-            }
+            let nextPage = grepNextPageURL(from: success.response)
             return .success(PageResponse(items: success.object, nextPage: nextPage))
         case .failure(let error):
             return .failure(error)
@@ -61,5 +56,18 @@ class IceAndFireService: AnyIceAndFireService {
         case .failure(let error):
             return .failure(error)
         }
+    }
+    
+    private func grepNextPageURL(from response: HTTPURLResponse) -> URL? {
+        guard let linkHeader = response.value(forHTTPHeaderField: "Link") else { return nil }
+        
+        let nextLinkString = linkHeader.components(separatedBy: ",")
+            .first(where: { $0.matches(regex: #"rel="next""#) })
+        
+        guard let nextLinkString,
+              let urlString = nextLinkString.matchGroups(regex: #"<(.+)>"#).first else {
+            return nil
+        }
+        return URL(string: urlString)
     }
 }
