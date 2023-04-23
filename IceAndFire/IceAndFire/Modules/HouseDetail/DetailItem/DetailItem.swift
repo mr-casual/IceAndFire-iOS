@@ -7,9 +7,8 @@
 
 import Foundation
 
-extension HouseDetailViewModel {
-    struct DetailItem: Hashable {
-        let title: String
-        let value: String
-    }
+struct DetailItem: Hashable {
+    let title: String
+    let value: String
 }
+

@@ -1,5 +1,5 @@
 //
-//  House+Details.swift
+//  HouseDetails.swift
 //  IceAndFire
 //
 //  Created by Martin Klöpfel on 22.04.23.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension House {
-    struct Details {
+extension HouseDetailViewModel {
+    struct HouseDetails {
         /// The Character of this house's current lord.
         let currentLord: Character?
         

@@ -65,7 +65,7 @@ struct HouseDetailView: View {
 extension HouseDetailView {
     struct DetailItemView: View {
         
-        let item: HouseDetailViewModel.DetailItem
+        let item: DetailItem
         
         var body: some View {
             VStack(alignment: .leading, spacing: 8) {
