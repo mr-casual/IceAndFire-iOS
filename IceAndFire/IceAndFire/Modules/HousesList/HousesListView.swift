@@ -30,16 +30,9 @@ struct HousesListView: View {
                     Spacer()
                 }
             } else if let errorText = viewModel.errorText {
-                VStack(alignment: .center, spacing: 16) {
-                    Text(errorText)
-                        .multilineTextAlignment(.center)
-                    Button("Retry") {
-                        Task { await viewModel.loadMore() }
-                    }
-                    .buttonStyle(.borderedProminent)
+                ErrorView(errorText: errorText) {
+                    Task { viewModel.loadMore }
                 }
-                .alignCentered()
-                .padding(16)
             } else if viewModel.isMoreAvailable {
                 Color.clear
                     .frame(height: 1)
@@ -73,12 +66,17 @@ struct ContentView_Previews: PreviewProvider {
             NavigationView {
                 HousesListView(viewModel: HousesListViewModel(service: firstPageService))
             }
+            .previewDisplayName("Content")
+            
             NavigationView {
                 HousesListView(viewModel: HousesListViewModel(service: loadingService))
             }
+            .previewDisplayName("Loading")
+            
             NavigationView {
                 HousesListView(viewModel: HousesListViewModel(service: errorService))
             }
+            .previewDisplayName("Error")
         }
     }
 }

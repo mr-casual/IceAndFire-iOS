@@ -44,7 +44,10 @@ struct HouseDetailView: View {
                         .alignCentered()
                         .padding(32)
                 case .error(let errorText):
-                    Text(errorText)
+                    ErrorView(errorText: errorText) {
+                        Task { await viewModel.loadDetails() }
+                    }
+                    .padding(.top, 16)
                 case .content(let details):
                     ForEach(details, id: \.self) { item in
                         DetailItemView(item: item)
@@ -85,7 +88,7 @@ struct HouseDetailView_Previews: PreviewProvider {
     }()
     static let errorService: MockIceAndFireService = {
         let service = MockIceAndFireService()
-        service.mockHouses = { _ in
+        service.mockHouse = { _ in
             return .failure(.urlError(.init(.notConnectedToInternet)))
         }
         return service
@@ -97,14 +100,19 @@ struct HouseDetailView_Previews: PreviewProvider {
                 HouseDetailView(viewModel: .init(house: .Mock.house7,
                                                  service: mockDetailsService))
             }
+            .previewDisplayName("Content")
+            
             NavigationView {
                 HouseDetailView(viewModel: .init(house: .Mock.house7,
                                                  service: loadingService))
             }
+            .previewDisplayName("Loading")
+            
             NavigationView {
                 HouseDetailView(viewModel: .init(house: .Mock.house7,
                                                  service: errorService))
             }
+            .previewDisplayName("Error")
         }
     }
 }
