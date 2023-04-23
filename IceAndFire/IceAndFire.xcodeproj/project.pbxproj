@@ -13,6 +13,7 @@
 		E701B7B929F4B88400E8EADC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B829F4B88400E8EADC /* ErrorView.swift */; };
 		E701B7BB29F4C08B00E8EADC /* .github in Resources */ = {isa = PBXBuildFile; fileRef = E701B7BA29F4C08B00E8EADC /* .github */; };
 		E701B7C029F4C3C900E8EADC /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = E701B7BF29F4C3C900E8EADC /* fastlane */; };
+		E701B7C429F4DC2600E8EADC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E701B7C329F4DC2600E8EADC /* .gitignore */; };
 		E72213CE29F40A1B007557C8 /* MockIceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193329F35D5500B3AF36 /* MockIceAndFireService.swift */; };
 		E72213CF29F40DA5007557C8 /* House+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193529F361AE00B3AF36 /* House+Mock.swift */; };
 		E72213D629F40E76007557C8 /* Character+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193729F3634500B3AF36 /* Character+Mock.swift */; };
@@ -100,6 +101,7 @@
 		E701B7B829F4B88400E8EADC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		E701B7BA29F4C08B00E8EADC /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
 		E701B7BF29F4C3C900E8EADC /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../fastlane; sourceTree = "<group>"; };
+		E701B7C329F4DC2600E8EADC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		E72213D129F40DDA007557C8 /* houses_page1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses_page1.json; sourceTree = "<group>"; };
 		E72213D229F40DDA007557C8 /* character894.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character894.json; sourceTree = "<group>"; };
 		E72213D329F40DDA007557C8 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
@@ -264,12 +266,13 @@
 		E77818C029F3140F00B3AF36 = {
 			isa = PBXGroup;
 			children = (
-				E701B7BA29F4C08B00E8EADC /* .github */,
-				E701B7BF29F4C3C900E8EADC /* fastlane */,
-				E701B7AF29F482AA00E8EADC /* IceAndFire.xctestplan */,
 				E77818CB29F3140F00B3AF36 /* IceAndFire */,
 				E77818DC29F3141300B3AF36 /* IceAndFireTests */,
 				E77818E629F3141300B3AF36 /* IceAndFireUITests */,
+				E701B7C329F4DC2600E8EADC /* .gitignore */,
+				E701B7BA29F4C08B00E8EADC /* .github */,
+				E701B7BF29F4C3C900E8EADC /* fastlane */,
+				E701B7AF29F482AA00E8EADC /* IceAndFire.xctestplan */,
 				E77818CA29F3140F00B3AF36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				E722147329F475C5007557C8 /* character1280.json in Resources */,
 				E701B7BB29F4C08B00E8EADC /* .github in Resources */,
 				E722147029F475C5007557C8 /* character300.json in Resources */,
+				E701B7C429F4DC2600E8EADC /* .gitignore in Resources */,
 				E722147229F475C5007557C8 /* character1715.json in Resources */,
 				E722147B29F475CD007557C8 /* house6.json in Resources */,
 				E722146E29F475C5007557C8 /* character1068.json in Resources */,
@@ -702,6 +706,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 			};
 			name = Debug;
 		};
@@ -755,6 +760,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
