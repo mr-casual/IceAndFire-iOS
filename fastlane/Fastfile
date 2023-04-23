@@ -5,6 +5,7 @@ platform :ios do
   lane :tests do
       scan(
         project: "IceAndFire/IceAndFire.xcodeproj",
-        scheme: "IceAndFire")
+        scheme: "IceAndFire",
+        devices: ["iPhone 14"])
   end
 end

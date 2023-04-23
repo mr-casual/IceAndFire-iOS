@@ -9,11 +9,13 @@
     }
   ],
   "defaultOptions" : {
+    "maximumTestRepetitions" : 2,
     "targetForVariableExpansion" : {
       "containerPath" : "container:IceAndFire.xcodeproj",
       "identifier" : "E77818C829F3140F00B3AF36",
       "name" : "IceAndFire"
-    }
+    },
+    "testRepetitionMode" : "fixedIterations"
   },
   "testTargets" : [
     {

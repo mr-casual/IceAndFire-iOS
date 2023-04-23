@@ -16,10 +16,6 @@ final class HousesListUITests: XCTestCase {
         app.launch()
     }
 
-    override func tearDown() {
-        app.terminate()
-    }
-
     func testFirstPage() throws {
         // testing a bunch of houses of first page (not all)
         let testExamples = ["House Algood",

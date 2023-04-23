@@ -16,10 +16,6 @@ final class HousesDetailUITests: XCTestCase {
         app.launch()
     }
 
-    override func tearDown() {
-        app.terminate()
-    }
-
     func testError() throws {
         // navigation
         app.staticTexts["House Baratheon of King's Landing"].tap()
