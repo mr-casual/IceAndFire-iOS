@@ -154,7 +154,7 @@
 		E778190729F3146600B3AF36 /* IceAndFireServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceAndFireServiceTests.swift; sourceTree = "<group>"; };
 		E778190F29F31B1E00B3AF36 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		E778191029F31B1E00B3AF36 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		E778191429F31D4600B3AF36 /* MockURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockURL.swift; path = ../../../../../../Documents/MockURL.swift; sourceTree = "<group>"; };
+		E778191429F31D4600B3AF36 /* MockURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURL.swift; sourceTree = "<group>"; };
 		E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		E778192529F33ABC00B3AF36 /* HousesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListViewModel.swift; sourceTree = "<group>"; };
 		E778192729F33AC500B3AF36 /* HouseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewModel.swift; sourceTree = "<group>"; };
