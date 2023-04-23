@@ -11,6 +11,8 @@
 		E701B7B429F4A1B800E8EADC /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B329F4A1B800E8EADC /* DetailItem.swift */; };
 		E701B7B629F4A1F000E8EADC /* DetailPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B529F4A1F000E8EADC /* DetailPresentable.swift */; };
 		E701B7B929F4B88400E8EADC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7B829F4B88400E8EADC /* ErrorView.swift */; };
+		E701B7BB29F4C08B00E8EADC /* .github in Resources */ = {isa = PBXBuildFile; fileRef = E701B7BA29F4C08B00E8EADC /* .github */; };
+		E701B7C029F4C3C900E8EADC /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = E701B7BF29F4C3C900E8EADC /* fastlane */; };
 		E72213CE29F40A1B007557C8 /* MockIceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193329F35D5500B3AF36 /* MockIceAndFireService.swift */; };
 		E72213CF29F40DA5007557C8 /* House+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193529F361AE00B3AF36 /* House+Mock.swift */; };
 		E72213D629F40E76007557C8 /* Character+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193729F3634500B3AF36 /* Character+Mock.swift */; };
@@ -96,6 +98,8 @@
 		E701B7B329F4A1B800E8EADC /* DetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
 		E701B7B529F4A1F000E8EADC /* DetailPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresentable.swift; sourceTree = "<group>"; };
 		E701B7B829F4B88400E8EADC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E701B7BA29F4C08B00E8EADC /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
+		E701B7BF29F4C3C900E8EADC /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../fastlane; sourceTree = "<group>"; };
 		E72213D129F40DDA007557C8 /* houses_page1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses_page1.json; sourceTree = "<group>"; };
 		E72213D229F40DDA007557C8 /* character894.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character894.json; sourceTree = "<group>"; };
 		E72213D329F40DDA007557C8 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 		E77818C029F3140F00B3AF36 = {
 			isa = PBXGroup;
 			children = (
+				E701B7BA29F4C08B00E8EADC /* .github */,
+				E701B7BF29F4C3C900E8EADC /* fastlane */,
 				E701B7AF29F482AA00E8EADC /* IceAndFire.xctestplan */,
 				E77818CB29F3140F00B3AF36 /* IceAndFire */,
 				E77818DC29F3141300B3AF36 /* IceAndFireTests */,
@@ -516,6 +522,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E701B7C029F4C3C900E8EADC /* fastlane in Resources */,
 				E722145F29F475C5007557C8 /* character93.json in Resources */,
 				E722147929F475CD007557C8 /* house16.json in Resources */,
 				E722147429F475C5007557C8 /* character508.json in Resources */,
@@ -528,6 +535,7 @@
 				E722145E29F475C5007557C8 /* character49.json in Resources */,
 				E722146A29F475C5007557C8 /* character894.json in Resources */,
 				E722147329F475C5007557C8 /* character1280.json in Resources */,
+				E701B7BB29F4C08B00E8EADC /* .github in Resources */,
 				E722147029F475C5007557C8 /* character300.json in Resources */,
 				E722147229F475C5007557C8 /* character1715.json in Resources */,
 				E722147B29F475CD007557C8 /* house6.json in Resources */,
