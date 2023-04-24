@@ -44,7 +44,7 @@ final class HousesListUITests: XCTestCase {
     }
     
     func testNavigation() throws {
-        app.staticTexts["House Baratheon of King's Landing"].tap()
+        app.cells.firstMatch.tap()
         XCTAssert(app.otherElements["HouseDetailView"].exists, "Navigation failed.")
     }
 }

@@ -20,7 +20,11 @@ final class HousesDetailUITests: XCTestCase {
 
     func testError() throws {
         // navigation
-        app.staticTexts["House Baratheon of King's Landing"].fixedTap()
+        if #available(iOS 16.0, *) {
+            app.staticTexts["House Baratheon of King's Landing"].fixedTap()
+        } else {
+            app.cells["House Baratheon of King's Landing"].tap()
+        }
 
         // test content
         let retryButton = app.buttons["Retry"]
@@ -32,8 +36,12 @@ final class HousesDetailUITests: XCTestCase {
     
     func testFullDetails() throws {
         // navigation
-        app.staticTexts["House Arryn of the Eyrie"].tap()
-
+        if #available(iOS 16.0, *) {
+            app.staticTexts["House Arryn of the Eyrie"].fixedTap()
+        } else {
+            app.cells["House Arryn of the Eyrie"].tap()
+        }
+        
         // test content
         let testExamples = ["The Vale",
                             "A sky-blue falcon soaring against a white moon, on a sky-blue field",
@@ -66,8 +74,8 @@ final class HousesDetailUITests: XCTestCase {
 
 extension XCUIElement {
     func fixedTap() {
-        if self.isHittable {
-            self.tap()
+        if isHittable {
+            tap()
         } else {
             let normalized = XCUIApplication().coordinate(withNormalizedOffset: .zero)
             let offset = CGVector(dx: frame.midX, dy: frame.midY)
