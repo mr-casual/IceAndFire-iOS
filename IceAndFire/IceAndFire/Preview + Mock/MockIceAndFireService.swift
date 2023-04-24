@@ -12,7 +12,7 @@ class MockIceAndFireService: AnyIceAndFireService {
     var loading: Bool = false
     
     var mockHouses: (URL?) -> Result<PageResponse<House>, RequestError> = { url in
-        let secondPage = URL(string: "https://www.anapioficeandfire.com/api/houses?page=2&pageSize=20")!
+        let secondPage = URL(string: "\(APIConstants.baseURLString)houses?page=2&pageSize=\(APIConstants.pageSize)")!
         switch url {
         case .none:
             return .success(.init(items: (try? House.Mock.page1()) ?? [], nextPage: secondPage))
@@ -24,7 +24,7 @@ class MockIceAndFireService: AnyIceAndFireService {
     }
     
     var mockHouse: (URL) -> Result<House, RequestError> = { url in
-        let urlPattern = #"https:\/\/www.anapioficeandfire.com\/api\/houses\/(.+)"#
+        let urlPattern = "\(APIConstants.baseURLString.withEscapedSlashes)houses\\/(.+)"
         guard let id = url.absoluteString.matchGroups(regex: urlPattern).first,
               let path = Bundle.main.path(forResource: "house\(id)", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
@@ -35,7 +35,7 @@ class MockIceAndFireService: AnyIceAndFireService {
     }
     
     var mockCharacter: (URL) -> Result<Character, RequestError> = { url in
-        let urlPattern = #"https:\/\/www.anapioficeandfire.com\/api\/characters\/(.+)"#
+        let urlPattern = "\(APIConstants.baseURLString.withEscapedSlashes)characters\\/(.+)"
         guard let id = url.absoluteString.matchGroups(regex: urlPattern).first,
               let path = Bundle.main.path(forResource: "character\(id)", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
@@ -46,31 +46,33 @@ class MockIceAndFireService: AnyIceAndFireService {
     }
     
     func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError> {
-        if loading {
-            while true {
-                try? await Task.sleep(nanoseconds: .max)
-            }
-        }
-        
+        await keepLoadingIfNeeded()
         return mockHouses(url)
     }
     
     func fetchHouse(from url: URL) async -> Result<House, RequestError> {
-        if loading {
-            while true {
-                try? await Task.sleep(nanoseconds: .max)
-            }
-        }
+        await keepLoadingIfNeeded()
         return mockHouse(url)
     }
-    
+        
     func fetchCharacter(from url: URL) async -> Result<Character, RequestError> {
+        await keepLoadingIfNeeded()
+        return mockCharacter(url)
+    }
+    
+    func keepLoadingIfNeeded() async {
         if loading {
             while true {
                 try? await Task.sleep(nanoseconds: .max)
             }
         }
-        return mockCharacter(url)
     }
 }
+
+fileprivate extension String {
+    var withEscapedSlashes: Self {
+        return self.replacingOccurrences(of: "/", with: #"\/"#)
+    }
+}
+
 #endif

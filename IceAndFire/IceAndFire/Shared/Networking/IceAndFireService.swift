@@ -27,7 +27,7 @@ class IceAndFireService: AnyIceAndFireService {
     }
     
     func fetchHouses(from url: URL?) async -> Result<PageResponse<House>, RequestError> {
-        let firstPageURL = URL(string: "https://www.anapioficeandfire.com/api/houses?pageSize=20")!
+        let firstPageURL = URL(string: "\(APIConstants.baseURLString)houses?pageSize=\(APIConstants.pageSize)")!
         let result: HTTPClient.Result<[House]> = await httpClient.GET(url ?? firstPageURL)
         switch result {
         case .success(let success):
