@@ -17,6 +17,7 @@
 		E701B7C929F4F7FF00E8EADC /* HousesDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7C829F4F7FF00E8EADC /* HousesDetailUITests.swift */; };
 		E701B7CB29F5941F00E8EADC /* House+DetailItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7CA29F5941F00E8EADC /* House+DetailItems.swift */; };
 		E701B7CD29F594DC00E8EADC /* HouseDetails+DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701B7CC29F594DC00E8EADC /* HouseDetails+DetailItem.swift */; };
+		E701B7CF29F6743700E8EADC /* doc in Resources */ = {isa = PBXBuildFile; fileRef = E701B7CE29F6743700E8EADC /* doc */; };
 		E72213CE29F40A1B007557C8 /* MockIceAndFireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193329F35D5500B3AF36 /* MockIceAndFireService.swift */; };
 		E72213CF29F40DA5007557C8 /* House+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193529F361AE00B3AF36 /* House+Mock.swift */; };
 		E72213D629F40E76007557C8 /* Character+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778193729F3634500B3AF36 /* Character+Mock.swift */; };
@@ -107,6 +108,7 @@
 		E701B7C829F4F7FF00E8EADC /* HousesDetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesDetailUITests.swift; sourceTree = "<group>"; };
 		E701B7CA29F5941F00E8EADC /* House+DetailItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "House+DetailItems.swift"; sourceTree = "<group>"; };
 		E701B7CC29F594DC00E8EADC /* HouseDetails+DetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HouseDetails+DetailItem.swift"; sourceTree = "<group>"; };
+		E701B7CE29F6743700E8EADC /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; name = doc; path = ../doc; sourceTree = "<group>"; };
 		E72213D129F40DDA007557C8 /* houses_page1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses_page1.json; sourceTree = "<group>"; };
 		E72213D229F40DDA007557C8 /* character894.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character894.json; sourceTree = "<group>"; };
 		E72213D329F40DDA007557C8 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				E77818E629F3141300B3AF36 /* IceAndFireUITests */,
 				E701B7C329F4DC2600E8EADC /* .gitignore */,
 				E701B7BA29F4C08B00E8EADC /* .github */,
+				E701B7CE29F6743700E8EADC /* doc */,
 				E701B7BF29F4C3C900E8EADC /* fastlane */,
 				E701B7AF29F482AA00E8EADC /* IceAndFire.xctestplan */,
 				E77818CA29F3140F00B3AF36 /* Products */,
@@ -540,6 +543,7 @@
 				E722146729F475C5007557C8 /* character572.json in Resources */,
 				E722146229F475C5007557C8 /* character688.json in Resources */,
 				E722147829F475CD007557C8 /* houses_page2.json in Resources */,
+				E701B7CF29F6743700E8EADC /* doc in Resources */,
 				E722146929F475C5007557C8 /* character265.json in Resources */,
 				E722145E29F475C5007557C8 /* character49.json in Resources */,
 				E722146A29F475C5007557C8 /* character894.json in Resources */,
