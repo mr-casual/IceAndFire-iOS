@@ -15,7 +15,7 @@
       "identifier" : "E77818C829F3140F00B3AF36",
       "name" : "IceAndFire"
     },
-    "testRepetitionMode" : "fixedIterations"
+    "testRepetitionMode" : "retryOnFailure"
   },
   "testTargets" : [
     {
