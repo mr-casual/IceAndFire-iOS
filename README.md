@@ -6,8 +6,8 @@
 Coding challenge for OneCode
 
 ## The Challenge
-- [german](doc/Challenge-de)
-- [english](doc/Challenge-en)
+- [german](doc/Challenge-de.md)
+- [english](doc/Challenge-en.md)
 
 ## About
 It's a simple iOS app which uses the following tech stack:
@@ -23,6 +23,7 @@ But I ended up using Combine, because it's easier when it comes to values of dif
 #### Possible Features and Improvements
 
 - also show details of characters
+- optimize layout for smaller devices
 - optimize for iPad
 - fix code coverage report
 - generated shield for code coverage
