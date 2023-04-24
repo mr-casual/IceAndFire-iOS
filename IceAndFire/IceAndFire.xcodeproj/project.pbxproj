@@ -60,7 +60,7 @@
 		E722147C29F475CD007557C8 /* houses_page1.json in Resources */ = {isa = PBXBuildFile; fileRef = E72213D129F40DDA007557C8 /* houses_page1.json */; };
 		E77818CD29F3140F00B3AF36 /* IceAndFireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818CC29F3140F00B3AF36 /* IceAndFireApp.swift */; };
 		E77818D129F3141200B3AF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77818D029F3141200B3AF36 /* Assets.xcassets */; };
-		E77818E829F3141300B3AF36 /* IceAndFireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818E729F3141300B3AF36 /* IceAndFireUITests.swift */; };
+		E77818E829F3141300B3AF36 /* HousesListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818E729F3141300B3AF36 /* HousesListUITests.swift */; };
 		E77818FB29F3145900B3AF36 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818F629F3145900B3AF36 /* House.swift */; };
 		E77818FC29F3145900B3AF36 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818F729F3145900B3AF36 /* HouseDetailView.swift */; };
 		E77818FD29F3145900B3AF36 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77818F829F3145900B3AF36 /* Character.swift */; };
@@ -69,7 +69,6 @@
 		E778190829F3146600B3AF36 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778190029F3146600B3AF36 /* CharacterTests.swift */; };
 		E778190D29F3146600B3AF36 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778190629F3146600B3AF36 /* HouseTests.swift */; };
 		E778190E29F3146600B3AF36 /* IceAndFireServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778190729F3146600B3AF36 /* IceAndFireServiceTests.swift */; };
-		E778191129F31B1E00B3AF36 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778190F29F31B1E00B3AF36 /* HTTPMethod.swift */; };
 		E778191229F31B1E00B3AF36 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191029F31B1E00B3AF36 /* HTTPClient.swift */; };
 		E778191529F31D4600B3AF36 /* MockURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191429F31D4600B3AF36 /* MockURL.swift */; };
 		E778191B29F32B5900B3AF36 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */; };
@@ -151,7 +150,7 @@
 		E77818D029F3141200B3AF36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E77818D929F3141300B3AF36 /* IceAndFireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceAndFireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77818E329F3141300B3AF36 /* IceAndFireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceAndFireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E77818E729F3141300B3AF36 /* IceAndFireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAndFireUITests.swift; sourceTree = "<group>"; };
+		E77818E729F3141300B3AF36 /* HousesListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListUITests.swift; sourceTree = "<group>"; };
 		E77818F629F3145900B3AF36 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		E77818F729F3145900B3AF36 /* HouseDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
 		E77818F829F3145900B3AF36 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -160,7 +159,6 @@
 		E778190029F3146600B3AF36 /* CharacterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 		E778190629F3146600B3AF36 /* HouseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
 		E778190729F3146600B3AF36 /* IceAndFireServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceAndFireServiceTests.swift; sourceTree = "<group>"; };
-		E778190F29F31B1E00B3AF36 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		E778191029F31B1E00B3AF36 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		E778191429F31D4600B3AF36 /* MockURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURL.swift; sourceTree = "<group>"; };
 		E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
@@ -298,10 +296,10 @@
 		E77818CB29F3140F00B3AF36 /* IceAndFire */ = {
 			isa = PBXGroup;
 			children = (
-				E77818D029F3141200B3AF36 /* Assets.xcassets */,
 				E778191C29F339AC00B3AF36 /* Modules */,
 				E778191D29F33A1800B3AF36 /* Shared */,
 				E77818D229F3141200B3AF36 /* Preview + Mock */,
+				E77818D029F3141200B3AF36 /* Assets.xcassets */,
 			);
 			path = IceAndFire;
 			sourceTree = "<group>";
@@ -320,13 +318,13 @@
 		E77818DC29F3141300B3AF36 /* IceAndFireTests */ = {
 			isa = PBXGroup;
 			children = (
+				E778190129F3146600B3AF36 /* Mock */,
 				E778190029F3146600B3AF36 /* CharacterTests.swift */,
 				E72213ED29F46BEF007557C8 /* HouseDetailViewModelTests.swift */,
 				E778193129F35CEF00B3AF36 /* HousesListViewModelTests.swift */,
 				E778190629F3146600B3AF36 /* HouseTests.swift */,
 				E778191A29F32B5900B3AF36 /* HTTPClientTests.swift */,
 				E778190729F3146600B3AF36 /* IceAndFireServiceTests.swift */,
-				E778190129F3146600B3AF36 /* Mock */,
 			);
 			path = IceAndFireTests;
 			sourceTree = "<group>";
@@ -334,7 +332,7 @@
 		E77818E629F3141300B3AF36 /* IceAndFireUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E77818E729F3141300B3AF36 /* IceAndFireUITests.swift */,
+				E77818E729F3141300B3AF36 /* HousesListUITests.swift */,
 				E701B7C829F4F7FF00E8EADC /* HousesDetailUITests.swift */,
 			);
 			path = IceAndFireUITests;
@@ -361,10 +359,10 @@
 		E778191D29F33A1800B3AF36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E701B7B729F4B87000E8EADC /* Views */,
 				E778192129F33A4B00B3AF36 /* Entities */,
 				E778192929F34CDD00B3AF36 /* Extensions */,
 				E778191E29F33A2200B3AF36 /* Networking */,
+				E701B7B729F4B87000E8EADC /* Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -373,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				E778191029F31B1E00B3AF36 /* HTTPClient.swift */,
-				E778190F29F31B1E00B3AF36 /* HTTPMethod.swift */,
 				E77818F929F3145900B3AF36 /* IceAndFireService.swift */,
 			);
 			path = Networking;
@@ -603,7 +600,6 @@
 				E72213D629F40E76007557C8 /* Character+Mock.swift in Sources */,
 				E701B7B929F4B88400E8EADC /* ErrorView.swift in Sources */,
 				E72213E629F427B9007557C8 /* HouseDetails.swift in Sources */,
-				E778191129F31B1E00B3AF36 /* HTTPMethod.swift in Sources */,
 				E77818CD29F3140F00B3AF36 /* IceAndFireApp.swift in Sources */,
 				E77818FE29F3145900B3AF36 /* IceAndFireService.swift in Sources */,
 				E77818FC29F3145900B3AF36 /* HouseDetailView.swift in Sources */,
@@ -640,7 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77818E829F3141300B3AF36 /* IceAndFireUITests.swift in Sources */,
+				E77818E829F3141300B3AF36 /* HousesListUITests.swift in Sources */,
 				E701B7C929F4F7FF00E8EADC /* HousesDetailUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

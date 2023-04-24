@@ -8,12 +8,6 @@
 import Foundation
 
 public extension String {
-    func matches(regex: NSRegularExpression) -> Bool {
-        // NOTE: we need to use utf16 here, since some special characters has a length of 2 chars in utf8
-        let range = NSRange(location: 0, length: self.utf16.count)
-        return regex.firstMatch(in: self, options: [], range: range) != nil
-    }
-    
     func matches(regex: String) -> Bool {
         return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
     }

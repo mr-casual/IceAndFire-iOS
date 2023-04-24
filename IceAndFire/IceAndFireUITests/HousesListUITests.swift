@@ -1,6 +1,6 @@
 //
-//  IceAndFireUITests.swift
-//  IceAndFireUITests
+//  HousesListUITests.swift
+//  HousesListUITests
 //
 //  Created by Martin Klöpfel on 21.04.23.
 //

@@ -9,20 +9,12 @@ import SwiftUI
 
 public extension View {
     
-    func alignLeft() -> some View {
-        HStack(spacing: 0) {
-            self
-            Spacer(minLength: 0)
-        }
-    }
-    
-    func alignRight() -> some View {
-        HStack(spacing: 0) {
-            Spacer(minLength: 0)
+    func alignLeading() -> some View {
+        VStack(alignment: .leading) {
             self
         }
     }
-    
+
     func alignCentered() -> some View {
         HStack(spacing: 0) {
             Spacer(minLength: 0)

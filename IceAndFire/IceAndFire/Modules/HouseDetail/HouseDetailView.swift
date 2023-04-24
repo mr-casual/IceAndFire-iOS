@@ -18,7 +18,7 @@ struct HouseDetailView: View {
                 if let region = viewModel.region {
                     Text("📍 " + region)
                         .font(.title2)
-                        .alignLeft()
+                        .alignLeading()
                 }
                 
                 // coatOfArms
