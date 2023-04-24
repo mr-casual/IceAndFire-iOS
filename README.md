@@ -21,10 +21,14 @@ The inital idea was to use `TaskGroups` to load the content for the detail scree
 But I ended up using Combine, because it's easier when it comes to values of different types. The child task of a group must be of the same type.
 <br>Take a look at [HouseDetailViewModel](https://github.com/mr-casual/IceAndFire-iOS/blob/main/IceAndFire/IceAndFire/Modules/HouseDetail/HouseDetailViewModel.swift) for more context.
 
+#### Known issues
+- ProgressView not visible, when paging
+- large title gets truncated
+
 #### Possible Features and Improvements
 
 - also show details of characters
-- optimize layout for smaller devices
+- optimize layout for smaller devices (large title get truncated)
 - optimize for iPad
 - fix code coverage report
 - generated shield for code coverage
