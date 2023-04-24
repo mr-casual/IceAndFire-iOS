@@ -27,5 +27,6 @@ But I ended up using Combine, because it's easier when it comes to values of dif
 - optimize for iPad
 - fix code coverage report
 - generated shield for code coverage
-
+- load images from different source
+- make UI more fancy ;)
 
