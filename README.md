@@ -19,6 +19,7 @@ It's a simple iOS app which uses the following tech stack:
 #### Note
 The inital idea was to use `TaskGroups` to load the content for the detail screen.
 But I ended up using Combine, because it's easier when it comes to values of different types. The child task of a group must be of the same type.
+<br>Take a look at [HouseDetailViewModel](https://github.com/mr-casual/IceAndFire-iOS/blob/main/IceAndFire/IceAndFire/Modules/HouseDetail/HouseDetailViewModel.swift) for more context.
 
 #### Possible Features and Improvements
 
