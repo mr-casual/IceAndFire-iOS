@@ -23,7 +23,7 @@ enum RequestError: Error {
     case serializationError(error: Error, data: Data?)
     
     /// Unknown error
-    case unknow(Error?, data: Data?)
+    case unknown(Error?, data: Data?)
 }
 
 class HTTPClient {
@@ -50,7 +50,7 @@ class HTTPClient {
             let (data, response) = try await urlSession.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse else {
-                return .failure(.unknow(nil, data: data))
+                return .failure(.unknown(nil, data: data))
             }
             
             switch httpResponse.statusCode {
@@ -61,7 +61,7 @@ class HTTPClient {
             case 500...511:
                 return .failure(.serverError(response: httpResponse, data: data))
             default:
-                return .failure(.unknow(nil, data: data))
+                return .failure(.unknown(nil, data: data))
             }
             
             responseBody = data
@@ -72,7 +72,7 @@ class HTTPClient {
         } catch let error as URLError {
             return .failure(.urlError(error))
         } catch {
-            return .failure(.unknow(error, data: responseBody))
+            return .failure(.unknown(error, data: responseBody))
         }
     }
 }

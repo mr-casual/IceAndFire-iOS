@@ -29,7 +29,7 @@ class MockIceAndFireService: AnyIceAndFireService {
               let path = Bundle.main.path(forResource: "house\(id)", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
               let house = try? JSONDecoder().decode(House.self, from: data) else {
-            return .failure(.unknow(nil, data: nil))
+            return .failure(.unknown(nil, data: nil))
         }
         return .success(house)
     }
@@ -40,7 +40,7 @@ class MockIceAndFireService: AnyIceAndFireService {
               let path = Bundle.main.path(forResource: "character\(id)", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
               let character = try? JSONDecoder().decode(Character.self, from: data) else {
-            return .failure(.unknow(nil, data: nil))
+            return .failure(.unknown(nil, data: nil))
         }
         return .success(character)
     }

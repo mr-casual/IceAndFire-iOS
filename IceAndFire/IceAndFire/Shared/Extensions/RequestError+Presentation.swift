@@ -18,7 +18,7 @@ extension RequestError {
             return "Error \(response.statusCode)"
         case .serializationError:
             return "Decoding failed :("
-        case .unknow:
+        case .unknown:
             return "Unknown error occurred"
         }
     }
