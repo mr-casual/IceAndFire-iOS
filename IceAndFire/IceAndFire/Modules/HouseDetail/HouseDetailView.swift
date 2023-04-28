@@ -80,6 +80,7 @@ extension HouseDetailView {
     }
 }
 
+#if DEBUG
 struct HouseDetailView_Previews: PreviewProvider {
     
     static let mockDetailsService = MockIceAndFireService()
@@ -118,3 +119,4 @@ struct HouseDetailView_Previews: PreviewProvider {
         }
     }
 }
+#endif

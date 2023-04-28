@@ -13,12 +13,16 @@ struct IceAndFireApp: App {
     private let service: AnyIceAndFireService
     
     init() {
+        #if DEBUG
         if ProcessInfo.processInfo.arguments.contains("TESTING") {
             UIView.setAnimationsEnabled(false)
             service = MockIceAndFireService()
         } else {
             service = IceAndFireService(urlSession: .shared)
         }
+        #else
+        service = IceAndFireService(urlSession: .shared)
+        #endif
     }
     
     var body: some Scene {

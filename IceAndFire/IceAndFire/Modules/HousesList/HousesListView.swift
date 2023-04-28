@@ -44,6 +44,7 @@ struct HousesListView: View {
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     
     static let firstPageService = MockIceAndFireService()
@@ -63,19 +64,20 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                HousesListView(viewModel: HousesListViewModel(service: firstPageService))
+                HousesListView(viewModel: .init(service: firstPageService))
             }
             .previewDisplayName("Content")
             
             NavigationView {
-                HousesListView(viewModel: HousesListViewModel(service: loadingService))
+                HousesListView(viewModel: .init(service: loadingService))
             }
             .previewDisplayName("Loading")
             
             NavigationView {
-                HousesListView(viewModel: HousesListViewModel(service: errorService))
+                HousesListView(viewModel: .init(service: errorService))
             }
             .previewDisplayName("Error")
         }
     }
 }
+#endif
